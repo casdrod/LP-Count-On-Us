@@ -427,8 +427,8 @@ footer{overflow:hidden; padding:40px 0 0;
         padding:30px; margin-top: 30px;
         #review-container {
             flex-wrap:wrap; border-radius: 20px;background:none;
-            .comment {background-color: #fff;padding-top: 0;border-radius: 0 0 20px 20px;
-                p {text-align:center;color: $text;}
+            .comment {background-color: #fff;border-radius: 0 0 20px 20px;padding: 0 20px 20px;
+                p {text-align:center;color: $text;font-size: 24px;}
             }
             #google {flex:0 1 100%; border-radius: 20px 20px 0 0;
                 .star {margin: 10px auto 20px;}
