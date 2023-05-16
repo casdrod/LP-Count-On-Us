@@ -1569,12 +1569,13 @@ footer figure {
   }
   #reviews #review-container .comment {
     background-color: #fff;
-    padding-top: 0;
     border-radius: 0 0 20px 20px;
+    padding: 0 20px 20px;
   }
   #reviews #review-container .comment p {
     text-align: center;
     color: #0D0D0D;
+    font-size: 24px;
   }
   #reviews #review-container #google {
     flex: 0 1 100%;
