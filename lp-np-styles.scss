@@ -46,11 +46,88 @@ h2{color:$text;text-align:left; font:600 55px/1.1 $font2; letter-spacing: -0.02e
 h3{font-size:32px;line-height:1.41}
 .h3 {color: $text; font: 500 22px/1 $font; letter-spacing: -0.02em; }
 .h4 {letter-spacing:.05em; color: $primary; font: 700 16px/1.1 $font; text-transform: uppercase; margin: 10px auto; }
+
+/* basic header styles */
 header{position:relative;padding:5px 10px;background-color:#FFF;
     .flex-ed{justify-content:space-between;align-items:center;flex-wrap:nowrap; max-width:1200px;margin:auto;width:100%;padding-top: 10px; padding-bottom:10px}
     .btn-alt{margin:0;}
     .phone {font-size: 45px;}
 }
+/* advanced header styles */
+/* header */
+// header{position:relative;padding:0;z-index:100;background-color: #fff;
+//     address{padding:0 8px;}
+//     .address{text-align:left;display:flex;color: #000;font-size:20px;line-height:1.25;font-weight:400;letter-spacing:.55px;
+//         &:hover{color:$primary}
+//         i:before {color: $primary;font-size: 22px;margin-left: -10px;margin-right: 15px;}
+//     }
+// 	#nav{padding: 20px 10px;display:flex;flex-wrap:wrap;max-width:1350px;justify-content:space-between;margin:auto;align-items:center;
+// 		.btn{display: flex;flex-wrap: wrap;	justify-content: center;margin:0;padding: 15px 25px;font-size:20px;background-color: $primary;max-width: 470px;color: #000;font-family: $font;font-weight: 600;border-radius: 20px;
+// 			i:before {margin-right: 10px;}
+// 			span {display: block;width: 100%;font-size: 44px;text-transform: uppercase;font-weight: 600;}
+//             &:hover {background-color: $secondary; color: #fff;}
+// 		}
+//         #header-details {
+//             .pho {display:flex;font-size: 41px;align-items:center;font-weight: 700;margin-bottom: 10px;color: $text;
+//                 i {
+//                     &:before {color: $primary;margin-right: 10px;
+//                         margin-left: 0;}
+//                 }
+//                  &:hover{color:$primary}
+//             }
+//             a {
+//                 i {
+//                     &:before {font-size: 22px;}
+//                 }
+//             }
+//         }
+// 		#mobile-btns {
+// 			width: 100%;display:flex;
+// 			> * {flex: 1;}
+// 			.btn {
+// 				display: flex;
+// 				flex-wrap: wrap;
+// 				padding: 10px;
+// 				justify-content: center;
+// 				border-radius: 0;
+// 				font-size: 16px;
+//                 margin: 0;
+// 				text-transform: uppercase;
+//                 background-color: $tertiary;
+// 				span {
+// 					width: 100%;font-size: 28px;
+// 				  }
+// 			}
+// 			.phone, .btn {
+// 				display: flex;
+// 				flex-wrap: wrap;
+// 				justify-content: center;
+// 				align-content: center;
+// 				span {
+// 					width: 100%;
+// 				}
+// 			  }
+// 			.phone {background-color: $primary;color: #000;font-size: 20px;line-height: 1.3;
+// 				span {text-transform: uppercase;font-size: 16px;font-weight: 700;letter-spacing: 1px;color: #000;}
+// 			}
+// 			#mobile-special {
+// 				.container {
+// 					margin: 10px 0;border-top: 2px solid #AFB1B1;border-bottom: 2px solid #AFB1B1;padding: 5px;
+// 					h4 {color: $tertiary;font-size: 22px;margin: 0;}
+// 					small {text-transform: uppercase;font-size: 14px;letter-spacing: .7px;font-weight: 700;}
+// 				}
+// 			}
+// 		  }
+    // 	}	
+    // }
+    // @media (min-width: 1000px) {
+    // 	#mobile-btns {
+    // 	  display: none!important;
+    // 	}
+// }
+/* end */
+
+
 .subpage {text-align: center; max-width: 1200px; margin: 100px auto; padding: 15px;}
 
 .phone{color: $primary;font-size:35px;line-height:1.1;font-family: $font; font-weight: 400; 
@@ -105,70 +182,81 @@ header{position:relative;padding:5px 10px;background-color:#FFF;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    border-bottom: 8px solid $secondary;
+    border-bottom: 8px solid $primary;
     > * {
       flex: 1 0 500px;
     }
-    figure {
-      margin: 0;
-      position: relative;
-      order: 1;
-      text-align: center;
-      img {
-        width: 100%;
-        position: relative;
-        width: 100%;
-      }
-      .caption {
-        position: absolute;
-        bottom: 0;
-        font-size: 18px;
-        width: 100%;
-        font-weight: bold;
-        letter-spacing: 1.3px;
-        background-color: rgb(255, 255, 255);
-        padding: 10px;
-        text-transform:uppercase;
-        color: $text;
-        font-family: $font;
-        text-transform: uppercase;
-        left: 50%;
-        transform: translateX(-50%);
-        a {color: $text;letter-spacing: 1.6px;
-            &:hover {color: $primary}
-        }
-      }
-    }
-    article {
-      order: 2;
-      position: relative;
-      z-index: 2;
-      padding: 10px;
-      display: flex;
-      margin: auto;
-      flex: 0 1 600px;
-      flex-flow: column wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 25px;
-      * {
-        color: #000;
-      }
-      small {opacity: 0.4;font-size: 16px;text-transform: uppercase;font-weight: 700;letter-spacing: 1.8px;}
-      h1 {
-        font-size: 40px;
-        font-weight: 300;
-        letter-spacing: normal;
-        line-height: 1;
-        text-align: center;
-        span {
-          display: block;
-          font-size: 70px;
-          line-height: 1;
-          font-family: $font2;
-          &:last-of-type {color: $primary;font-style: italic;}
-        }
-      }
+    .flex-ed {background-color: $tertiary;
+        figure {
+            margin: 0;
+            position: relative;
+            order: 1;
+            text-align: center;
+            img {
+              width: 100%;
+              position: relative;
+              width: 100%;
+            }
+            .caption {
+              position: absolute;
+              bottom: 0;
+              font-size: 18px;
+              width: 100%;
+              font-weight: bold;
+              letter-spacing: 1.3px;
+              background-color: rgb(255, 255, 255);
+              padding: 10px;
+              text-transform:uppercase;
+              color: $text;
+              font-family: $font;
+              text-transform: uppercase;
+              left: 50%;
+              transform: translateX(-50%);
+              a {color: $text;letter-spacing: 1.6px;
+                  &:hover {color: $primary}
+              }
+            }
+          }
+          article {
+            order: 2;
+            position: relative;
+            z-index: 2;
+            padding: 10px;
+            display: flex;
+            margin: auto;
+            flex: 0 1 600px;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            * {
+              color: #000;
+            }
+            small {opacity: 0.4;font-size: 16px;text-transform: uppercase;font-weight: 700;letter-spacing: 1.8px;}
+            h1 {
+              font-size: 23px;
+              font-weight: 700;
+              letter-spacing: normal;
+              line-height: 1;
+              text-align: center;
+              text-transform:uppercase;margin-bottom: 25px;
+              span {
+                display: block;
+                font-weight: 200;
+                text-transform:none;
+                font-size: 70px;
+                line-height: 1;
+                font-family: $font2;
+              }
+              &:after {content: '';margin: 20px auto;
+                  background-color: $primary;
+                  width: 110px;
+                  height: 3px;
+                  position: absolute;
+                  left: 0;
+                  right: 0;}
+            }
+          }
     }
     #stamps {
       display: flex;
@@ -181,17 +269,6 @@ header{position:relative;padding:5px 10px;background-color:#FFF;
       }
     }
   }
-  
-
-#why {
-    max-width: 1200px;margin: 70px auto 60px;padding: 0 20px;
-    h2 {text-align:center;margin-bottom: 15px;font-weight: 600;color: $text;}
-    #icons {display: flex;justify-content: space-evenly;flex-wrap: wrap;margin: 40px auto 0;}
-    p, span {font-size: 24px;}
-    span {line-height: 22px;}
-    p {line-height: 31px;}
-    > span {font-size: 35px;}
-}
 
 .count {
    background: $secondary; display: flex; max-width: 1120px; margin: 75px auto 50px; border-radius: 8px; box-shadow:1px 1px 12px 5px rgba(0, 0, 0, 0.2);
@@ -262,7 +339,13 @@ header{position:relative;padding:5px 10px;background-color:#FFF;
 }
 
 .insurance{text-align:left;padding:0;position:relative;overflow:hidden;
-    .container{max-width:1140px;margin:auto;padding:20px;text-align:center}
+    .container{max-width:1140px;margin:auto;padding:20px;text-align:center;
+        #insurance-list {display: flex;flex-wrap: wrap;
+            span {display: flex;margin: 20px auto;align-items: center;}
+        }
+        small {opacity: 0.4;}
+        .btn {font-size: 20px; border-radius: 0;}
+    }
     h2{display:flex;align-items:center;position:relative;text-align:center;z-index:2;padding:10px 20px 15px;margin:10px auto -15px;justify-content:center;
         &:before, &:after{content:'';height:2px;background-color:#204369;flex:1}
         &:before{margin-right:20px}
@@ -289,11 +372,11 @@ footer{overflow:hidden; padding:40px 0 0;
         }
     }
     .phy {color: #fff; font-size: 20px; display: block; position: relative;padding-left: 40px;
-        &:before {position: absolute; left: 0; top: 8px; font-family: fontello; content: '\e948'; color: $primary;  font-size: 30px;}
+        &:before {position: absolute; left: 0; top: 8px; font-family: fontello; content: '\e809'; color: $primary;  font-size: 22px;}
         &:hover {color: $primary;}    
         }
     .pho {color: #fff; display: block; position: relative; font: 600 35px/1.1 $font; margin: 35px 0 20px; padding-left: 40px;
-        &:before {position: absolute; left: 0px;top: 3px; font-family: fontello; content: '\e80b'; color: $primary;  font-size: 38px;}
+        &:before {position: absolute; left: 0px;top: 3px; font-family: fontello; content: '\e80b'; color: $primary;  font-size: 30px;}
         &:hover {color: $primary;}
     }
     .split{justify-content:space-between;max-width:1160px; padding: 0; align-items:flex-start;margin:auto;margin-bottom:70px;
@@ -315,7 +398,7 @@ footer{overflow:hidden; padding:40px 0 0;
 }
 
 
-.copy {margin-top:20px;padding:40px 10px 20px; background-color:#2F211E; margin:auto;text-transform:uppercase; font:400 11px/1.4 $font; color:#fff; letter-spacing: normal;
+.copy {margin-top:20px;padding:40px 10px 20px; background-color:#0D0D0D; margin:auto;text-transform:uppercase; font:400 11px/1.4 $font; color:#fff; letter-spacing: normal;
    a, p {font:400 11px/1.4 $font; color:#fff; letter-spacing: normal;}
     p {margin: 20px auto; max-width: 1090px; letter-spacing: normal;}
     a:hover{color:$primary;text-decoration:underline}
@@ -354,7 +437,9 @@ footer{overflow:hidden; padding:40px 0 0;
     #banner .flex-ed .offer:last-of-type {margin-top: 20px;}
     #hero {background-size: cover;}
 }
-
+@media (max-width: 1180px) {
+    #header-details {display:none;}
+}
 @media (max-width: 1080px) {
     .address{font-size:16px}
     .phone{font-size:32px}
@@ -365,6 +450,13 @@ footer{overflow:hidden; padding:40px 0 0;
     .split h2 {font-size: 50px;}
 }
 @media (max-width: 1024px) {
+    header {
+        #nav {
+            .logo {margin: auto;
+                width: 100%;}
+            .btn {margin: 20px auto 0;}
+        }
+    }
     #hero { background-image:none; 
         h1 { margin-top: 20px;text-transform: uppercase;font-size: 18px!important;
             span {text-transform:none;font-size: 46px!important;}
@@ -386,9 +478,15 @@ footer{overflow:hidden; padding:40px 0 0;
 }
 @media (max-width: 1000px) {
     header {  
-        .address{display:none}
-        .btn-alt{margin:0; order:0}
         .flex-ed{justify-content:space-around}
+        #nav {padding: 0;
+            > .btn{display:none;}
+            .logo {margin: 20px auto;}
+        }
+    }
+    /* basic header styles */
+    header {
+        .address {display:none;}
     }
     .safe-bar {font-size: 19px; padding: 7px 10px;}
     #banner .flex-ed {flex-wrap: wrap; max-width: 800px;}
@@ -399,21 +497,23 @@ footer{overflow:hidden; padding:40px 0 0;
         &:after {content: none;}
     }
 
-    .count {display: block;background-color: #2D2D2D;padding: 20px 0;margin: 50px 20px 0; border-radius: 20px;
+    .count {display: block;background-color: $tertiary;padding: 20px 0;margin: 50px 20px 0; border-radius: 20px;
         .h2 {padding: 20px; font-size: 50px;
             span {display:inline;}
         }
         article {border-radius: 0 0 8px 8px; padding: 0 20px 20px;background-color: #2D2D2D;
             ul {padding: 0 0 0 10px;
                 li {color: #fff;
-                    &:before {color: #fff;}
                 }
             }
         }
     }
-    #first {
-        .flex-ed {padding-top: 10px;margin: 0 20px 20px;}
+    #first {box-shadow: 3px 0px 10px lightgray;
+        margin: 30px;
+        border-radius: 20px;padding: 0;
+        .flex-ed {padding-top: 10px;margin: 0;}
     }
+
     .count.no-insurance article {border-radius: 8px 8px 0 0;}
     #banner h2 {font-size: 36px; padding: 0 10px;;}
     .split { margin: 50px auto;
@@ -424,17 +524,19 @@ footer{overflow:hidden; padding:40px 0 0;
         ul {display: table; margin:  auto;}
     }
     #reviews{
-        padding:30px; margin-top: 30px;
+        padding:60px 30px; margin-top: 30px;
         #review-container {
-            flex-wrap:wrap; border-radius: 20px;background:none;
-            .comment {background-color: #fff;border-radius: 0 0 20px 20px;padding: 0 20px 20px;
-                p {text-align:center;color: $text;font-size: 24px;}
+            flex-wrap:wrap; border-radius: 20px;background-color:$secondary;
+            .comment {border-radius: 0 0 20px 20px;padding: 0 20px 60px;
+                p {text-align:center;color: #fff;font-size: 24px;line-height: 30px;}
+                .caption2 {font-size: 18px;width: 100%;
+                    margin-top: 10px;}
             }
-            #google {flex:0 1 100%; border-radius: 20px 20px 0 0;
+            #google {flex:0 1 100%; border-radius: 20px 20px 0 0;background:none;
                 .star {margin: 10px auto 20px;}
-                p {margin: 0 auto;}
+                p {margin: 0 auto;color: #fff;}
                 p img{margin:0 auto;}
-                 > div{margin-top:10px}
+                 > div{margin-top:40px}
             }
         }
     }
@@ -447,8 +549,15 @@ footer{overflow:hidden; padding:40px 0 0;
         }
     }
 
-    #about .flex-ed {margin: 0 20px 20px;padding-top: 0;}
-
+    #about {
+        box-shadow: 3px 0px 10px lightgray;
+        margin: 30px;
+        border-radius: 20px;padding: 0;
+        .flex-ed {margin: 0;padding-top: 0;
+            article {margin: 0;}
+        }
+    }
+    
     .over {top: -30px;}
     
     footer {padding: 0;

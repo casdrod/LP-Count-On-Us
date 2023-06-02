@@ -453,6 +453,7 @@ h3 {
   margin: 10px auto;
 }
 
+/* basic header styles */
 header {
   position: relative;
   padding: 5px 10px;
@@ -475,6 +476,9 @@ header .phone {
   font-size: 45px;
 }
 
+/* advanced header styles */
+/* header */
+/* end */
 .subpage {
   text-align: center;
   max-width: 1200px;
@@ -685,23 +689,26 @@ header .phone {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  border-bottom: 8px solid #155090;
+  border-bottom: 8px solid #238DC1;
 }
 #hero > * {
   flex: 1 0 500px;
 }
-#hero figure {
+#hero .flex-ed {
+  background-color: #EFF7FC;
+}
+#hero .flex-ed figure {
   margin: 0;
   position: relative;
   order: 1;
   text-align: center;
 }
-#hero figure img {
+#hero .flex-ed figure img {
   width: 100%;
   position: relative;
   width: 100%;
 }
-#hero figure .caption {
+#hero .flex-ed figure .caption {
   position: absolute;
   bottom: 0;
   font-size: 18px;
@@ -717,14 +724,14 @@ header .phone {
   left: 50%;
   transform: translateX(-50%);
 }
-#hero figure .caption a {
+#hero .flex-ed figure .caption a {
   color: #0D0D0D;
   letter-spacing: 1.6px;
 }
-#hero figure .caption a:hover {
+#hero .flex-ed figure .caption a:hover {
   color: #238DC1;
 }
-#hero article {
+#hero .flex-ed article {
   order: 2;
   position: relative;
   z-index: 2;
@@ -737,32 +744,42 @@ header .phone {
   align-items: center;
   gap: 25px;
 }
-#hero article * {
+#hero .flex-ed article * {
   color: #000;
 }
-#hero article small {
+#hero .flex-ed article small {
   opacity: 0.4;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 1.8px;
 }
-#hero article h1 {
-  font-size: 40px;
-  font-weight: 300;
+#hero .flex-ed article h1 {
+  font-size: 23px;
+  font-weight: 700;
   letter-spacing: normal;
   line-height: 1;
   text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 25px;
 }
-#hero article h1 span {
+#hero .flex-ed article h1 span {
   display: block;
+  font-weight: 200;
+  text-transform: none;
   font-size: 70px;
   line-height: 1;
   font-family: "Source Serif Pro", serif;
 }
-#hero article h1 span:last-of-type {
-  color: #238DC1;
-  font-style: italic;
+#hero .flex-ed article h1:after {
+  content: "";
+  margin: 20px auto;
+  background-color: #238DC1;
+  width: 110px;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 #hero #stamps {
   display: flex;
@@ -773,36 +790,6 @@ header .phone {
 }
 #hero #stamps img {
   margin: 0;
-}
-
-#why {
-  max-width: 1200px;
-  margin: 70px auto 60px;
-  padding: 0 20px;
-}
-#why h2 {
-  text-align: center;
-  margin-bottom: 15px;
-  font-weight: 600;
-  color: #0D0D0D;
-}
-#why #icons {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin: 40px auto 0;
-}
-#why p, #why span {
-  font-size: 24px;
-}
-#why span {
-  line-height: 22px;
-}
-#why p {
-  line-height: 31px;
-}
-#why > span {
-  font-size: 35px;
 }
 
 .count {
@@ -1103,6 +1090,22 @@ header .phone {
   padding: 20px;
   text-align: center;
 }
+.insurance .container #insurance-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.insurance .container #insurance-list span {
+  display: flex;
+  margin: 20px auto;
+  align-items: center;
+}
+.insurance .container small {
+  opacity: 0.4;
+}
+.insurance .container .btn {
+  font-size: 20px;
+  border-radius: 0;
+}
 .insurance h2 {
   display: flex;
   align-items: center;
@@ -1191,9 +1194,9 @@ footer .phy:before {
   left: 0;
   top: 8px;
   font-family: fontello;
-  content: "\e948";
+  content: "\e809";
   color: #238DC1;
-  font-size: 30px;
+  font-size: 22px;
 }
 footer .phy:hover {
   color: #238DC1;
@@ -1213,7 +1216,7 @@ footer .pho:before {
   font-family: fontello;
   content: "\e80b";
   color: #238DC1;
-  font-size: 38px;
+  font-size: 30px;
 }
 footer .pho:hover {
   color: #238DC1;
@@ -1290,7 +1293,7 @@ footer figure {
 .copy {
   margin-top: 20px;
   padding: 40px 10px 20px;
-  background-color: #2F211E;
+  background-color: #0D0D0D;
   margin: auto;
   text-transform: uppercase;
   font: 400 11px/1.4 "Inter", sans-serif;
@@ -1413,6 +1416,11 @@ footer figure {
     background-size: cover;
   }
 }
+@media (max-width: 1180px) {
+  #header-details {
+    display: none;
+  }
+}
 @media (max-width: 1080px) {
   .address {
     font-size: 16px;
@@ -1438,6 +1446,13 @@ footer figure {
   }
 }
 @media (max-width: 1024px) {
+  header #nav .logo {
+    margin: auto;
+    width: 100%;
+  }
+  header #nav .btn {
+    margin: 20px auto 0;
+  }
   #hero {
     background-image: none;
   }
@@ -1475,15 +1490,21 @@ footer figure {
   }
 }
 @media (max-width: 1000px) {
-  header .address {
-    display: none;
-  }
-  header .btn-alt {
-    margin: 0;
-    order: 0;
-  }
   header .flex-ed {
     justify-content: space-around;
+  }
+  header #nav {
+    padding: 0;
+  }
+  header #nav > .btn {
+    display: none;
+  }
+  header #nav .logo {
+    margin: 20px auto;
+  }
+  /* basic header styles */
+  header .address {
+    display: none;
   }
   .safe-bar {
     font-size: 19px;
@@ -1504,7 +1525,7 @@ footer figure {
   }
   .count {
     display: block;
-    background-color: #2D2D2D;
+    background-color: #EFF7FC;
     padding: 20px 0;
     margin: 50px 20px 0;
     border-radius: 20px;
@@ -1527,12 +1548,15 @@ footer figure {
   .count article ul li {
     color: #fff;
   }
-  .count article ul li:before {
-    color: #fff;
+  #first {
+    box-shadow: 3px 0px 10px lightgray;
+    margin: 30px;
+    border-radius: 20px;
+    padding: 0;
   }
   #first .flex-ed {
     padding-top: 10px;
-    margin: 0 20px 20px;
+    margin: 0;
   }
   .count.no-insurance article {
     border-radius: 8px 8px 0 0;
@@ -1559,39 +1583,46 @@ footer figure {
     margin: auto;
   }
   #reviews {
-    padding: 30px;
+    padding: 60px 30px;
     margin-top: 30px;
   }
   #reviews #review-container {
     flex-wrap: wrap;
     border-radius: 20px;
-    background: none;
+    background-color: #155090;
   }
   #reviews #review-container .comment {
-    background-color: #fff;
     border-radius: 0 0 20px 20px;
-    padding: 0 20px 20px;
+    padding: 0 20px 60px;
   }
   #reviews #review-container .comment p {
     text-align: center;
-    color: #0D0D0D;
+    color: #fff;
     font-size: 24px;
+    line-height: 30px;
+  }
+  #reviews #review-container .comment .caption2 {
+    font-size: 18px;
+    width: 100%;
+    margin-top: 10px;
   }
   #reviews #review-container #google {
     flex: 0 1 100%;
     border-radius: 20px 20px 0 0;
+    background: none;
   }
   #reviews #review-container #google .star {
     margin: 10px auto 20px;
   }
   #reviews #review-container #google p {
     margin: 0 auto;
+    color: #fff;
   }
   #reviews #review-container #google p img {
     margin: 0 auto;
   }
   #reviews #review-container #google > div {
-    margin-top: 10px;
+    margin-top: 40px;
   }
   .insurance .container h2 {
     display: flex;
@@ -1611,9 +1642,18 @@ footer figure {
     bottom: 10px;
     margin: auto;
   }
+  #about {
+    box-shadow: 3px 0px 10px lightgray;
+    margin: 30px;
+    border-radius: 20px;
+    padding: 0;
+  }
   #about .flex-ed {
-    margin: 0 20px 20px;
+    margin: 0;
     padding-top: 0;
+  }
+  #about .flex-ed article {
+    margin: 0;
   }
   .over {
     top: -30px;
