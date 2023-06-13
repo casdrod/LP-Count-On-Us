@@ -2,11 +2,11 @@
 .animated{-webkit-animation-duration:2s;animation-duration:2s;-webkit-animation-fill-mode:both;animation-fill-mode:both}@-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.fadeIn{-webkit-animation-name:fadeIn;animation-name:fadeIn}@-webkit-keyframes slideIn{from{transform:translate3d(0,-100%,0)}to{transform:translate3d(0,0,0)}}@keyframes slideIn{from{transform:translate3d(0,-100%,0)}to{transform:translate3d(0,0,0)}}@-webkit-keyframes fadeInUp{from{opacity:0;transform:translate3d(0,100%,0)}to{opacity:1;transform:none}}@keyframes fadeInUp{from{opacity:0;transform:translate3d(0,100%,0)}to{opacity:1;transform:none}}.fadeInUp{-webkit-animation-name:fadeInUp;animation-name:fadeInUp}@-webkit-keyframes fadeInRight{from{opacity:0;transform:translate3d(100%,0,0)}to{opacity:1;transform:none}}@keyframes fadeInRight{from{opacity:0;transform:translate3d(100%,0,0)}to{opacity:1;transform:none}}.fadeInRight{-webkit-animation-name:fadeInRight;animation-name:fadeInRight}@-webkit-keyframes fadeInLeft{from{opacity:0;transform:translate3d(-100%,0,0)}to{opacity:1;transform:none}}@keyframes fadeInLeft{from{opacity:0;transform:translate3d(-100%,0,0)}to{opacity:1;transform:none}}.fadeInLeft{-webkit-animation-name:fadeInLeft;animation-name:fadeInLeft}
 .star:before{font-size: 28px;font-family:'fontello';font-weight:400;margin:0;font-style:normal;content:'\e80f \e80f \e80f \e80f \e80f';color:#FEBB21; letter-spacing: .3em; }
 
-$primary:  #238DC1;
-$secondary: #155090;
-$tertiary: #EFF7FC;
-$font: 'Inter', sans-serif;
-$font2: 'Source Serif Pro', serif;
+$primary:  #FFA32F;
+$secondary: #00375D;
+$tertiary: #EAEEF2;
+$font: 'Kumbh Sans', sans-serif;
+$font2: 'Kumbh Sans', sans-serif;
 $text: #0D0D0D;
 
 
@@ -34,7 +34,7 @@ $text: #0D0D0D;
     }
 }
 
-body{position:relative;background-color:  #fff; font-family: $font; text-align:center; overflow-x: hidden;}
+body{position:relative;background-color: #F6F6F6; font-family: $font; text-align:center; overflow-x: hidden;}
 p{font:400 20px/28px $font; color: $text;}
 a{display:inline-block;text-decoration:none;cursor:pointer}
 h1,h2,h3,h4,h5,h6{font-family: $font;}
@@ -46,88 +46,72 @@ h2{color:$text;text-align:left; font:600 55px/1.1 $font2; letter-spacing: -0.02e
 h3{font-size:32px;line-height:1.41}
 .h3 {color: $text; font: 500 22px/1 $font; letter-spacing: -0.02em; }
 .h4 {letter-spacing:.05em; color: $primary; font: 700 16px/1.1 $font; text-transform: uppercase; margin: 10px auto; }
-
-/* basic header styles */
-header{position:relative;padding:5px 10px;background-color:#FFF;
-    .flex-ed{justify-content:space-between;align-items:center;flex-wrap:nowrap; max-width:1200px;margin:auto;width:100%;padding-top: 10px; padding-bottom:10px}
-    .btn-alt{margin:0;}
-    .phone {font-size: 45px;}
-}
-/* advanced header styles */
 /* header */
-// header{position:relative;padding:0;z-index:100;background-color: #fff;
-//     address{padding:0 8px;}
-//     .address{text-align:left;display:flex;color: #000;font-size:20px;line-height:1.25;font-weight:400;letter-spacing:.55px;
-//         &:hover{color:$primary}
-//         i:before {color: $primary;font-size: 22px;margin-left: -10px;margin-right: 15px;}
-//     }
-// 	#nav{padding: 20px 10px;display:flex;flex-wrap:wrap;max-width:1350px;justify-content:space-between;margin:auto;align-items:center;
-// 		.btn{display: flex;flex-wrap: wrap;	justify-content: center;margin:0;padding: 15px 25px;font-size:20px;background-color: $primary;max-width: 470px;color: #000;font-family: $font;font-weight: 600;border-radius: 20px;
-// 			i:before {margin-right: 10px;}
-// 			span {display: block;width: 100%;font-size: 44px;text-transform: uppercase;font-weight: 600;}
-//             &:hover {background-color: $secondary; color: #fff;}
-// 		}
-//         #header-details {
-//             .pho {display:flex;font-size: 41px;align-items:center;font-weight: 700;margin-bottom: 10px;color: $text;
-//                 i {
-//                     &:before {color: $primary;margin-right: 10px;
-//                         margin-left: 0;}
-//                 }
-//                  &:hover{color:$primary}
-//             }
-//             a {
-//                 i {
-//                     &:before {font-size: 22px;}
-//                 }
-//             }
-//         }
-// 		#mobile-btns {
-// 			width: 100%;display:flex;
-// 			> * {flex: 1;}
-// 			.btn {
-// 				display: flex;
-// 				flex-wrap: wrap;
-// 				padding: 10px;
-// 				justify-content: center;
-// 				border-radius: 0;
-// 				font-size: 16px;
-//                 margin: 0;
-// 				text-transform: uppercase;
-//                 background-color: $tertiary;
-// 				span {
-// 					width: 100%;font-size: 28px;
-// 				  }
-// 			}
-// 			.phone, .btn {
-// 				display: flex;
-// 				flex-wrap: wrap;
-// 				justify-content: center;
-// 				align-content: center;
-// 				span {
-// 					width: 100%;
-// 				}
-// 			  }
-// 			.phone {background-color: $primary;color: #000;font-size: 20px;line-height: 1.3;
-// 				span {text-transform: uppercase;font-size: 16px;font-weight: 700;letter-spacing: 1px;color: #000;}
-// 			}
-// 			#mobile-special {
-// 				.container {
-// 					margin: 10px 0;border-top: 2px solid #AFB1B1;border-bottom: 2px solid #AFB1B1;padding: 5px;
-// 					h4 {color: $tertiary;font-size: 22px;margin: 0;}
-// 					small {text-transform: uppercase;font-size: 14px;letter-spacing: .7px;font-weight: 700;}
-// 				}
-// 			}
-// 		  }
-    // 	}	
-    // }
-    // @media (min-width: 1000px) {
-    // 	#mobile-btns {
-    // 	  display: none!important;
-    // 	}
-// }
-/* end */
-
-
+header{position:relative;padding:0;z-index:100;background-color: #fff;
+    address{padding:0 8px;}
+    .address{text-align:left;display:flex;color: #000;font-size:20px;line-height:1.25;font-weight:400;letter-spacing:.55px;
+        &:hover{color:$primary}
+        i:before {color: $primary;font-size: 22px;margin-left: -10px;margin-right: 15px;}
+    }
+	#nav{padding: 20px 10px;display:flex;flex-wrap:wrap;max-width:1350px;justify-content:space-between;margin:auto;align-items:center;
+		.btn{display: flex;flex-wrap: wrap;	justify-content: center;margin:0;padding: 15px 25px;font-size:20px;background-color: $primary;max-width: 470px;color: #000;font-family: $font;font-weight: 600;border-radius: 20px;
+			i:before {margin-right: 10px;}
+			span {display: block;width: 100%;font-size: 44px;text-transform: uppercase;font-weight: 600;}
+            &:hover {background-color: $secondary; color: #fff;}
+		}
+        #header-details {
+            .pho {display:flex;font-size: 41px;align-items:center;font-weight: 700;margin-bottom: 10px;color: $text;
+                i {
+                    &:before {color: $primary;margin-right: 10px;
+                        margin-left: 0;}
+                }
+                &:hover{color:$primary}
+            }
+            a {
+                i {
+                    &:before {font-size: 22px;}
+                }
+            }
+        }
+		#mobile-btns {
+			width: 100%;display:flex;
+			> * {flex: 1;}
+			.btn {
+				display: flex;
+				flex-wrap: wrap;
+				padding: 10px;
+				justify-content: center;
+				border-radius: 0;
+				font-size: 16px;
+                margin: 0;
+				text-transform: uppercase;
+                background-color: $tertiary;
+				span {
+					width: 100%;font-size: 28px;
+				  }
+			}
+			.phone, .btn {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-content: center;
+				span {
+					width: 100%;
+				}
+			  }
+			.phone {background-color: $primary;color: #000;font-size: 20px;line-height: 1.3;
+				span {text-transform: uppercase;font-size: 16px;font-weight: 700;letter-spacing: 1px;color: #000;}
+			}
+			#mobile-special {
+				.container {
+					margin: 10px 0;border-top: 2px solid #AFB1B1;border-bottom: 2px solid #AFB1B1;padding: 5px;
+					h4 {color: $tertiary;font-size: 22px;margin: 0;}
+					small {text-transform: uppercase;font-size: 14px;letter-spacing: .7px;font-weight: 700;}
+				}
+			}
+		  }
+	}	
+}
 .subpage {text-align: center; max-width: 1200px; margin: 100px auto; padding: 15px;}
 
 .phone{color: $primary;font-size:35px;line-height:1.1;font-family: $font; font-weight: 400; 
@@ -147,19 +131,21 @@ header{position:relative;padding:5px 10px;background-color:#FFF;
 
 .split{display:flex;justify-content:space-around;flex-wrap:nowrap;align-items:center;justify-content:center; margin: 100px auto 50px; padding: 0 20px; overflow: hidden;
     .flex-ed {max-width: 1100px; margin: 50px auto; position: relative;; display: flex; flex-wrap: nowrap;background-color: #fff;box-shadow: 5px 4px 13px 5px #01010129;
-        &:before, &:after {content: ''; position: absolute; left: -40px; top: -80px; z-index: -1;  background-color: $primary; opacity: .2; width: 420px; height: 270px;}
+        &:before, &:after {content: ''; position: absolute; left: -40px; top: -80px; z-index: -1;  background-color: $secondary; opacity: .4; width: 420px; height: 270px;}
         &:after {left: auto; top: auto; bottom: -80px; right: -40px}
     }
     article{margin:10px;flex:0 1 600px; text-align: left;  padding: 35px 40px 30px; display: flex;flex-direction: column; justify-content: center;}
-    h2 {margin: 5px auto 25px;font-weight:500;
+    h2 {margin: 5px auto 25px;font-weight:300;font-size: 55px;
         span {
-            &:last-of-type {display: inline;font-style: italic;font-family: $font2; color: $primary;font-size: 55px;}
+            &:last-of-type {display: block;font-weight: 400;font-size: 24px;}
         }
     }
     &.even figure{order:-1;margin-right:40px}
     ul { text-align: left; list-style-type: none; padding: 0;
         li {font-size: 24px; position: relative; padding-left: 35px; margin: 20px auto ;
-            &:before {content: '\e832'; font-family: fontello; color: $primary; position: absolute; left: 0; top: 0;  }
+            &:before {content: '\e840'; font-family: fontello; color: $primary; position: absolute; left: -8px;
+                top: -2px;
+                font-size: 34px;}
         }
     }
     figure {position: relative;}
@@ -272,20 +258,21 @@ header{position:relative;padding:5px 10px;background-color:#FFF;
 
 .count {
    background: $secondary; display: flex; max-width: 1120px; margin: 75px auto 50px; border-radius: 8px; box-shadow:1px 1px 12px 5px rgba(0, 0, 0, 0.2);
-   .h2 {flex-wrap: wrap;text-align: center; color: #fff; font: 700 70px/1 $font2; align-self: center; padding: 40px 15px;
+   .h2 {flex-wrap: wrap;text-align: center; color: #fff; text-transform:uppercase;font: 200 59px/63px $font2; align-self: center; padding: 40px 15px;
         span {display:block;font-style: italic;}
     }
    article {background: #fff; flex: 1;border-radius: 0 8px 8px 0;}
-   ul {font-size: 24px; list-style-type: none; text-align: left; line-height: 1.2; margin: 10px auto 10px 30px; padding: 40px 20px; display: table;
+   ul {font-size: 29px; list-style-type: none; text-align: left; line-height: 1.2; margin: 10px auto 10px 30px; padding: 40px 20px; display: table;
         li {position: relative; padding: 10px 0 10px 40px;
-            &:before {content: '\e832';font-family: fontello;color: $secondary;position: absolute;left: 0;top: 7px;}
+            &:before {content: '\e840';font-family: fontello;color: $primary;position: absolute;left: -10px;top: 4px;
+                font-size: 40px;}
         }
  }
 }
 
 #first {margin-top: 20px;}
 
-#banner{overflow:hidden;border-top: 8px solid $secondary;
+#banner{overflow:hidden;border-top: 8px solid $primary;
     h2{display:flex;align-items:center;position:relative;text-align:center;z-index:2;padding:10px 20px 25px;margin:10px auto -15px; max-width:1160px; justify-content:center; color: $secondary; font-size: 45px; font-weight: 500;}
     h2:before, h2:after{content:'';height:2px;background-color:$secondary;flex:1; margin-top: 5px;}
     h2:before{margin-right:20px}
@@ -318,8 +305,8 @@ header{position:relative;padding:5px 10px;background-color:#FFF;
 }
 
 
-#reviews{background-color: $secondary; padding:80px 30px; margin-top: 60px;}
-#review-container{position:relative;border-radius: 8px; background: #D1E4EF; box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.16);box-shadow:1.6px 2.5px 7px rgba(7,8,8,0.15);max-width:1120px;color:$text;align-items:center;padding:0;margin:auto;flex-wrap:nowrap; }
+#reviews{background-color: $tertiary; padding:80px 30px; margin-top: 60px;}
+#review-container{position:relative;border-radius: 8px; background: $secondary; box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.16);box-shadow:1.6px 2.5px 7px rgba(7,8,8,0.15);max-width:1120px;color:#fff;align-items:center;padding:0;margin:auto;flex-wrap:nowrap; }
 .over {width: 100px; height: 100px; border-radius: 50%; color: #fff; font: 700 18px/.9 $font; text-transform: uppercase;
     box-shadow: 2px 3px 13px rgba(3, 47, 42, 0.2); 
     background-color: $primary; text-align: center; padding: 15px 10px 10px; height: 80px; width: 80px; display: flex;
@@ -334,25 +321,22 @@ header{position:relative;padding:5px 10px;background-color:#FFF;
 }
 
 .comment{flex:1 1 900px;padding:50px 50px 60px;text-align:left;margin:auto;
-    p{font:400 30px/41px $font;margin-top:30px;margin-bottom:10px;color:$text; letter-spacing: 0.05em;line-height: 45px;}
+    p{font:400 30px/40px $font;margin-top:30px;margin-bottom:10px;color:#fff; letter-spacing: 0.05em;line-height: 45px;}
     .caption2{float:right;font:600 normal 16px/1 $font; letter-spacing: 0.15em; text-transform:uppercase;margin:5px 0 0}
 }
 
 .insurance{text-align:left;padding:0;position:relative;overflow:hidden;
     .container{max-width:1140px;margin:auto;padding:20px;text-align:center;
         #insurance-list {display: flex;flex-wrap: wrap;
-            span {display: flex;margin: 20px auto;align-items: center;}
+            span {display: flex;margin: 10px auto;align-items: center;}
         }
         small {opacity: 0.4;}
         .btn {font-size: 20px; border-radius: 0;}
     }
-    h2{display:flex;align-items:center;position:relative;text-align:center;z-index:2;padding:10px 20px 15px;margin:10px auto -15px;justify-content:center;
+    h2{display:flex;font-weight: 300;font-size: 43px;align-items:center;position:relative;text-align:center;z-index:2;padding:10px 20px 15px;margin:10px auto -15px;justify-content:center;
         &:before, &:after{content:'';height:2px;background-color:#204369;flex:1}
         &:before{margin-right:20px}
         &:after{margin-left:20px}
-        span {
-            &:last-of-type {font-size: 55px;font-style: italic;font-family: $font2;display:inline;margin: 0;color: $primary;}
-        }
     }
     #insurance-list {display:flex;flex-wrap:wrap;justify-content: space-evenly;}
     .flex-ed{display:flex;justify-content: center; align-items:center;max-width:1200px;margin:0 auto;
@@ -366,7 +350,7 @@ header{position:relative;padding:5px 10px;background-color:#FFF;
 
 
 footer{overflow:hidden; padding:40px 0 0;
-    h2{font:500 70px/1 $font2;color:#fff; margin:0 auto 30px;
+    h2{font:300 70px/1 $font!important;color:#fff; margin:0 auto 30px;
         span {
             &:last-of-type {font-size: 70px!important;color: #fff!important;}
         }
@@ -374,7 +358,7 @@ footer{overflow:hidden; padding:40px 0 0;
     .phy {color: #fff; font-size: 20px; display: block; position: relative;padding-left: 40px;
         &:before {position: absolute; left: 0; top: 8px; font-family: fontello; content: '\e809'; color: $primary;  font-size: 22px;}
         &:hover {color: $primary;}    
-        }
+    }
     .pho {color: #fff; display: block; position: relative; font: 600 35px/1.1 $font; margin: 35px 0 20px; padding-left: 40px;
         &:before {position: absolute; left: 0px;top: 3px; font-family: fontello; content: '\e80b'; color: $primary;  font-size: 30px;}
         &:hover {color: $primary;}
@@ -476,33 +460,36 @@ footer{overflow:hidden; padding:40px 0 0;
         .flex-ed {padding-top: 40px;}
     }
 }
+@media (min-width: 1000px) {
+	#mobile-btns {
+	  display: none!important;
+	}
+}
 @media (max-width: 1000px) {
     header {  
-        .flex-ed{justify-content:space-around}
+        .flex-ed{justify-content:space-around;        }
         #nav {padding: 0;
-            > .btn{display:none;}
+            > .btn {display:none;}
             .logo {margin: 20px auto;}
         }
-    }
-    /* basic header styles */
-    header {
-        .address {display:none;}
     }
     .safe-bar {font-size: 19px; padding: 7px 10px;}
     #banner .flex-ed {flex-wrap: wrap; max-width: 800px;}
     .phone{font-size:24px; }
-    
+    #hero {
+        article {background-color: $tertiary;}
+    }
     .insurance h2 {
         &:before {content: none;}
         &:after {content: none;}
     }
 
-    .count {display: block;background-color: $tertiary;padding: 20px 0;margin: 50px 20px 0; border-radius: 20px;
+    .count {display: block;background-color: $secondary;padding: 20px 0;margin: 50px 20px 0; border-radius: 20px;
         .h2 {padding: 20px; font-size: 50px;
             span {display:inline;}
         }
-        article {border-radius: 0 0 8px 8px; padding: 0 20px 20px;background-color: #2D2D2D;
-            ul {padding: 0 0 0 10px;
+        article {border-radius: 0 0 8px 8px; padding: 0 20px 20px;background-color: $secondary;
+            ul {padding: 0 0 0 10px;margin-left: 5px;
                 li {color: #fff;
                 }
             }
@@ -513,7 +500,6 @@ footer{overflow:hidden; padding:40px 0 0;
         border-radius: 20px;padding: 0;
         .flex-ed {padding-top: 10px;margin: 0;}
     }
-
     .count.no-insurance article {border-radius: 8px 8px 0 0;}
     #banner h2 {font-size: 36px; padding: 0 10px;;}
     .split { margin: 50px auto;
@@ -557,11 +543,11 @@ footer{overflow:hidden; padding:40px 0 0;
             article {margin: 0;}
         }
     }
-    
+
     .over {top: -30px;}
     
     footer {padding: 0;
-        .split {margin: 20px; border-radius: 20px;}
+        .split {margin: 30px; border-radius: 20px;}
         .split article {padding: 50px 10px 10px; border-radius: 0;}
         .split p {text-align: left;}
         .phy, .pho, .hours {display: table; margin: 20px auto;}
@@ -662,6 +648,7 @@ footer{overflow:hidden; padding:40px 0 0;
     }
     .frame{display:none;}
     .copy{padding:30px 10px 20px}
+    .hours label {width: 120px;}
     #hero .caption {line-height: .7; position: static; padding: 10px;transform: none; max-width: 100%;}
 }
 @media (max-width: 480px) {

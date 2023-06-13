@@ -345,8 +345,8 @@ footer {
     flex: 1;
     font-size: 13px;
     font-weight: 700;
-    font-family: "Inter", sans-serif;
-    background-color: #0f3763;
+    font-family: "Kumbh Sans", sans-serif;
+    background-color: #00192a;
     color: #fff;
     text-transform: uppercase;
   }
@@ -358,7 +358,7 @@ footer {
     margin-left: 7px;
   }
   #fixed-tabs a:nth-of-type(2) {
-    background-color: #1b6d96;
+    background-color: #fb8c00;
   }
   #fixed-tabs .ra {
     flex: 2;
@@ -385,14 +385,14 @@ footer {
 }
 body {
   position: relative;
-  background-color: #fff;
-  font-family: "Inter", sans-serif;
+  background-color: #F6F6F6;
+  font-family: "Kumbh Sans", sans-serif;
   text-align: center;
   overflow-x: hidden;
 }
 
 p {
-  font: 400 20px/28px "Inter", sans-serif;
+  font: 400 20px/28px "Kumbh Sans", sans-serif;
   color: #0D0D0D;
 }
 
@@ -403,7 +403,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .mobile-banner-reviews {
@@ -414,14 +414,14 @@ h1 {
   margin: 0;
   text-align: center;
   color: #0D0D0D;
-  font: 700 70px/1.1 "Inter", sans-serif;
+  font: 700 70px/1.1 "Kumbh Sans", sans-serif;
   letter-spacing: -0.02em;
 }
 
 h2 {
   color: #0D0D0D;
   text-align: left;
-  font: 600 55px/1.1 "Source Serif Pro", serif;
+  font: 600 55px/1.1 "Kumbh Sans", sans-serif;
   letter-spacing: -0.02em;
 }
 h2 span {
@@ -429,7 +429,7 @@ h2 span {
   font-size: 24px;
   font-weight: 400;
   color: #0D0D0D;
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   margin-bottom: 10px;
   letter-spacing: 0.3px;
 }
@@ -441,44 +441,164 @@ h3 {
 
 .h3 {
   color: #0D0D0D;
-  font: 500 22px/1 "Inter", sans-serif;
+  font: 500 22px/1 "Kumbh Sans", sans-serif;
   letter-spacing: -0.02em;
 }
 
 .h4 {
   letter-spacing: 0.05em;
-  color: #238DC1;
-  font: 700 16px/1.1 "Inter", sans-serif;
+  color: #FFA32F;
+  font: 700 16px/1.1 "Kumbh Sans", sans-serif;
   text-transform: uppercase;
   margin: 10px auto;
 }
 
-/* basic header styles */
+/* header */
 header {
   position: relative;
-  padding: 5px 10px;
-  background-color: #FFF;
+  padding: 0;
+  z-index: 100;
+  background-color: #fff;
 }
-header .flex-ed {
+header address {
+  padding: 0 8px;
+}
+header .address {
+  text-align: left;
+  display: flex;
+  color: #000;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 400;
+  letter-spacing: 0.55px;
+}
+header .address:hover {
+  color: #FFA32F;
+}
+header .address i:before {
+  color: #FFA32F;
+  font-size: 22px;
+  margin-left: -10px;
+  margin-right: 15px;
+}
+header #nav {
+  padding: 20px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1350px;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  max-width: 1200px;
   margin: auto;
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  align-items: center;
 }
-header .btn-alt {
+header #nav .btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 15px 25px;
+  font-size: 20px;
+  background-color: #FFA32F;
+  max-width: 470px;
+  color: #000;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 600;
+  border-radius: 20px;
+}
+header #nav .btn i:before {
+  margin-right: 10px;
+}
+header #nav .btn span {
+  display: block;
+  width: 100%;
+  font-size: 44px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+header #nav .btn:hover {
+  background-color: #00375D;
+  color: #fff;
+}
+header #nav #header-details .pho {
+  display: flex;
+  font-size: 41px;
+  align-items: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0D0D0D;
+}
+header #nav #header-details .pho i:before {
+  color: #FFA32F;
+  margin-right: 10px;
+  margin-left: 0;
+}
+header #nav #header-details .pho:hover {
+  color: #FFA32F;
+}
+header #nav #header-details a i:before {
+  font-size: 22px;
+}
+header #nav #mobile-btns {
+  width: 100%;
+  display: flex;
+}
+header #nav #mobile-btns > * {
+  flex: 1;
+}
+header #nav #mobile-btns .btn {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: center;
+  border-radius: 0;
+  font-size: 16px;
+  margin: 0;
+  text-transform: uppercase;
+  background-color: #EAEEF2;
+}
+header #nav #mobile-btns .btn span {
+  width: 100%;
+  font-size: 28px;
+}
+header #nav #mobile-btns .phone, header #nav #mobile-btns .btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+header #nav #mobile-btns .phone span, header #nav #mobile-btns .btn span {
+  width: 100%;
+}
+header #nav #mobile-btns .phone {
+  background-color: #FFA32F;
+  color: #000;
+  font-size: 20px;
+  line-height: 1.3;
+}
+header #nav #mobile-btns .phone span {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #000;
+}
+header #nav #mobile-btns #mobile-special .container {
+  margin: 10px 0;
+  border-top: 2px solid #AFB1B1;
+  border-bottom: 2px solid #AFB1B1;
+  padding: 5px;
+}
+header #nav #mobile-btns #mobile-special .container h4 {
+  color: #EAEEF2;
+  font-size: 22px;
   margin: 0;
 }
-header .phone {
-  font-size: 45px;
+header #nav #mobile-btns #mobile-special .container small {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  font-weight: 700;
 }
 
-/* advanced header styles */
-/* header */
-/* end */
 .subpage {
   text-align: center;
   max-width: 1200px;
@@ -487,10 +607,10 @@ header .phone {
 }
 
 .phone {
-  color: #238DC1;
+  color: #FFA32F;
   font-size: 35px;
   line-height: 1.1;
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-weight: 400;
 }
 .phone span {
@@ -502,7 +622,7 @@ header .phone {
   letter-spacing: 1px;
 }
 .phone:hover {
-  color: #238DC1;
+  color: #FFA32F;
 }
 
 .address {
@@ -512,7 +632,7 @@ header .phone {
 }
 
 .address:hover {
-  color: #238DC1;
+  color: #FFA32F;
 }
 
 .fix-nav header {
@@ -535,9 +655,9 @@ header .phone {
   margin: 3px auto;
   padding: 10px 25px;
   color: #fff;
-  font: 700 14px/1 "Inter", sans-serif;
+  font: 700 14px/1 "Kumbh Sans", sans-serif;
   transition: border 0.3s;
-  background-color: #238DC1;
+  background-color: #FFA32F;
   transition: 0.3s all;
   text-transform: uppercase;
   border-radius: 6px;
@@ -550,8 +670,8 @@ header .phone {
   letter-spacing: 0.05em;
 }
 .btn:hover, .btn:hover, .btn-alt:hover, .btn-alt:hover {
-  background-color: #155090;
-  border-color: #155090;
+  background-color: #00375D;
+  border-color: #00375D;
   color: #fff;
 }
 
@@ -580,8 +700,8 @@ header .phone {
   left: -40px;
   top: -80px;
   z-index: -1;
-  background-color: #238DC1;
-  opacity: 0.2;
+  background-color: #00375D;
+  opacity: 0.4;
   width: 420px;
   height: 270px;
 }
@@ -602,14 +722,13 @@ header .phone {
 }
 .split h2 {
   margin: 5px auto 25px;
-  font-weight: 500;
+  font-weight: 300;
+  font-size: 55px;
 }
 .split h2 span:last-of-type {
-  display: inline;
-  font-style: italic;
-  font-family: "Source Serif Pro", serif;
-  color: #238DC1;
-  font-size: 55px;
+  display: block;
+  font-weight: 400;
+  font-size: 24px;
 }
 .split.even figure {
   order: -1;
@@ -627,12 +746,13 @@ header .phone {
   margin: 20px auto;
 }
 .split ul li:before {
-  content: "\e832";
+  content: "\e840";
   font-family: fontello;
-  color: #238DC1;
+  color: #FFA32F;
   position: absolute;
-  left: 0;
-  top: 0;
+  left: -8px;
+  top: -2px;
+  font-size: 34px;
 }
 .split figure {
   position: relative;
@@ -652,7 +772,7 @@ header .phone {
   color: #0D0D0D;
   font-size: 11px;
   font-weight: 700;
-  font-family: "Source Serif Pro", serif;
+  font-family: "Kumbh Sans", sans-serif;
   letter-spacing: 0.15em;
 }
 .split.alt figure {
@@ -672,10 +792,10 @@ header .phone {
 .safe-bar {
   width: 100%;
   position: relative;
-  background-color: #155090;
+  background-color: #00375D;
   z-index: 10;
   color: #fff;
-  font: 400 24px/1.2 "Inter", sans-serif;
+  font: 400 24px/1.2 "Kumbh Sans", sans-serif;
   padding: 8px 10px;
   text-align: center;
   letter-spacing: 0.47px;
@@ -689,13 +809,13 @@ header .phone {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  border-bottom: 8px solid #238DC1;
+  border-bottom: 8px solid #FFA32F;
 }
 #hero > * {
   flex: 1 0 500px;
 }
 #hero .flex-ed {
-  background-color: #EFF7FC;
+  background-color: #EAEEF2;
 }
 #hero .flex-ed figure {
   margin: 0;
@@ -719,7 +839,7 @@ header .phone {
   padding: 10px;
   text-transform: uppercase;
   color: #0D0D0D;
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   text-transform: uppercase;
   left: 50%;
   transform: translateX(-50%);
@@ -729,7 +849,7 @@ header .phone {
   letter-spacing: 1.6px;
 }
 #hero .flex-ed figure .caption a:hover {
-  color: #238DC1;
+  color: #FFA32F;
 }
 #hero .flex-ed article {
   order: 2;
@@ -769,12 +889,12 @@ header .phone {
   text-transform: none;
   font-size: 70px;
   line-height: 1;
-  font-family: "Source Serif Pro", serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 #hero .flex-ed article h1:after {
   content: "";
   margin: 20px auto;
-  background-color: #238DC1;
+  background-color: #FFA32F;
   width: 110px;
   height: 3px;
   position: absolute;
@@ -793,7 +913,7 @@ header .phone {
 }
 
 .count {
-  background: #155090;
+  background: #00375D;
   display: flex;
   max-width: 1120px;
   margin: 75px auto 50px;
@@ -804,7 +924,8 @@ header .phone {
   flex-wrap: wrap;
   text-align: center;
   color: #fff;
-  font: 700 70px/1 "Source Serif Pro", serif;
+  text-transform: uppercase;
+  font: 200 59px/63px "Kumbh Sans", sans-serif;
   align-self: center;
   padding: 40px 15px;
 }
@@ -818,7 +939,7 @@ header .phone {
   border-radius: 0 8px 8px 0;
 }
 .count ul {
-  font-size: 24px;
+  font-size: 29px;
   list-style-type: none;
   text-align: left;
   line-height: 1.2;
@@ -831,12 +952,13 @@ header .phone {
   padding: 10px 0 10px 40px;
 }
 .count ul li:before {
-  content: "\e832";
+  content: "\e840";
   font-family: fontello;
-  color: #155090;
+  color: #FFA32F;
   position: absolute;
-  left: 0;
-  top: 7px;
+  left: -10px;
+  top: 4px;
+  font-size: 40px;
 }
 
 #first {
@@ -845,7 +967,7 @@ header .phone {
 
 #banner {
   overflow: hidden;
-  border-top: 8px solid #155090;
+  border-top: 8px solid #FFA32F;
 }
 #banner h2 {
   display: flex;
@@ -857,14 +979,14 @@ header .phone {
   margin: 10px auto -15px;
   max-width: 1160px;
   justify-content: center;
-  color: #155090;
+  color: #00375D;
   font-size: 45px;
   font-weight: 500;
 }
 #banner h2:before, #banner h2:after {
   content: "";
   height: 2px;
-  background-color: #155090;
+  background-color: #00375D;
   flex: 1;
   margin-top: 5px;
 }
@@ -912,7 +1034,7 @@ header .phone {
 }
 .offer .h1 {
   color: #973e32;
-  font: 600 60px/1.1 "Source Serif Pro", serif;
+  font: 600 60px/1.1 "Kumbh Sans", sans-serif;
   letter-spacing: normal;
   text-transform: uppercase;
 }
@@ -941,13 +1063,13 @@ header .phone {
   margin: 0 auto 0 0;
 }
 .offer .h2 {
-  font: 700 60px/1.1 "Inter", sans-serif;
-  color: #238DC1;
+  font: 700 60px/1.1 "Kumbh Sans", sans-serif;
+  color: #FFA32F;
   letter-spacing: -0.02em;
   margin-bottom: 0;
 }
 .offer .h4 {
-  color: #155090;
+  color: #00375D;
 }
 .offer .asterisk {
   color: #0D0D0D;
@@ -974,7 +1096,7 @@ header .phone {
 }
 
 #reviews {
-  background-color: #155090;
+  background-color: #EAEEF2;
   padding: 80px 30px;
   margin-top: 60px;
 }
@@ -982,11 +1104,11 @@ header .phone {
 #review-container {
   position: relative;
   border-radius: 8px;
-  background: #D1E4EF;
+  background: #00375D;
   box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.16);
   box-shadow: 1.6px 2.5px 7px rgba(7, 8, 8, 0.15);
   max-width: 1120px;
-  color: #0D0D0D;
+  color: #fff;
   align-items: center;
   padding: 0;
   margin: auto;
@@ -998,10 +1120,10 @@ header .phone {
   height: 100px;
   border-radius: 50%;
   color: #fff;
-  font: 700 18px/0.9 "Inter", sans-serif;
+  font: 700 18px/0.9 "Kumbh Sans", sans-serif;
   text-transform: uppercase;
   box-shadow: 2px 3px 13px rgba(3, 47, 42, 0.2);
-  background-color: #238DC1;
+  background-color: #FFA32F;
   text-align: center;
   padding: 15px 10px 10px;
   height: 80px;
@@ -1052,7 +1174,7 @@ header .phone {
   text-transform: uppercase;
   color: #0D0D0D;
   font-weight: 600;
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   letter-spacing: 1.5px;
 }
 
@@ -1063,16 +1185,16 @@ header .phone {
   margin: auto;
 }
 .comment p {
-  font: 400 30px/41px "Inter", sans-serif;
+  font: 400 30px/40px "Kumbh Sans", sans-serif;
   margin-top: 30px;
   margin-bottom: 10px;
-  color: #0D0D0D;
+  color: #fff;
   letter-spacing: 0.05em;
   line-height: 45px;
 }
 .comment .caption2 {
   float: right;
-  font: 600 normal 16px/1 "Inter", sans-serif;
+  font: 600 normal 16px/1 "Kumbh Sans", sans-serif;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin: 5px 0 0;
@@ -1096,7 +1218,7 @@ header .phone {
 }
 .insurance .container #insurance-list span {
   display: flex;
-  margin: 20px auto;
+  margin: 10px auto;
   align-items: center;
 }
 .insurance .container small {
@@ -1108,6 +1230,8 @@ header .phone {
 }
 .insurance h2 {
   display: flex;
+  font-weight: 300;
+  font-size: 43px;
   align-items: center;
   position: relative;
   text-align: center;
@@ -1127,14 +1251,6 @@ header .phone {
 }
 .insurance h2:after {
   margin-left: 20px;
-}
-.insurance h2 span:last-of-type {
-  font-size: 55px;
-  font-style: italic;
-  font-family: "Source Serif Pro", serif;
-  display: inline;
-  margin: 0;
-  color: #238DC1;
 }
 .insurance #insurance-list {
   display: flex;
@@ -1164,7 +1280,7 @@ header .phone {
 }
 .insurance #disclaimer {
   color: rgba(37, 38, 39, 0.4);
-  font: 400 16px/1 "Inter", sans-serif;
+  font: 400 16px/1 "Kumbh Sans", sans-serif;
   margin-top: 20px;
   text-align: center;
 }
@@ -1174,7 +1290,7 @@ footer {
   padding: 40px 0 0;
 }
 footer h2 {
-  font: 500 70px/1 "Source Serif Pro", serif;
+  font: 300 70px/1 "Kumbh Sans", sans-serif !important;
   color: #fff;
   margin: 0 auto 30px;
 }
@@ -1195,17 +1311,17 @@ footer .phy:before {
   top: 8px;
   font-family: fontello;
   content: "\e809";
-  color: #238DC1;
+  color: #FFA32F;
   font-size: 22px;
 }
 footer .phy:hover {
-  color: #238DC1;
+  color: #FFA32F;
 }
 footer .pho {
   color: #fff;
   display: block;
   position: relative;
-  font: 600 35px/1.1 "Inter", sans-serif;
+  font: 600 35px/1.1 "Kumbh Sans", sans-serif;
   margin: 35px 0 20px;
   padding-left: 40px;
 }
@@ -1215,11 +1331,11 @@ footer .pho:before {
   top: 3px;
   font-family: fontello;
   content: "\e80b";
-  color: #238DC1;
+  color: #FFA32F;
   font-size: 30px;
 }
 footer .pho:hover {
-  color: #238DC1;
+  color: #FFA32F;
 }
 footer .split {
   justify-content: space-between;
@@ -1231,7 +1347,7 @@ footer .split {
 }
 footer .split article {
   flex: 0 1 500px;
-  background-color: #155090;
+  background-color: #00375D;
   padding: 85px 60px;
   margin: 0;
   align-self: center;
@@ -1259,7 +1375,7 @@ footer figure {
   top: 25px;
   font-family: fontello;
   content: "\e839";
-  color: #238DC1;
+  color: #FFA32F;
   font-size: 30px;
 }
 
@@ -1273,7 +1389,7 @@ footer figure {
   font-size: 20px;
   color: #fff;
   line-height: 34px;
-  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .frame {
@@ -1296,12 +1412,12 @@ footer figure {
   background-color: #0D0D0D;
   margin: auto;
   text-transform: uppercase;
-  font: 400 11px/1.4 "Inter", sans-serif;
+  font: 400 11px/1.4 "Kumbh Sans", sans-serif;
   color: #fff;
   letter-spacing: normal;
 }
 .copy a, .copy p {
-  font: 400 11px/1.4 "Inter", sans-serif;
+  font: 400 11px/1.4 "Kumbh Sans", sans-serif;
   color: #fff;
   letter-spacing: normal;
 }
@@ -1311,7 +1427,7 @@ footer figure {
   letter-spacing: normal;
 }
 .copy a:hover {
-  color: #238DC1;
+  color: #FFA32F;
   text-decoration: underline;
 }
 .copy span {
@@ -1374,7 +1490,7 @@ footer figure {
 #lp-appointment-form textarea:focus, #lp-appointment-form input:focus, #lp-appointment-form button:focus, #lp-appointment-form select:focus {
   outline-style: solid;
   outline-width: thin;
-  outline-color: #155090;
+  outline-color: #00375D;
 }
 #lp-appointment-form .submitBtn {
   text-align: center;
@@ -1489,6 +1605,11 @@ footer figure {
     padding-top: 40px;
   }
 }
+@media (min-width: 1000px) {
+  #mobile-btns {
+    display: none !important;
+  }
+}
 @media (max-width: 1000px) {
   header .flex-ed {
     justify-content: space-around;
@@ -1502,10 +1623,6 @@ footer figure {
   header #nav .logo {
     margin: 20px auto;
   }
-  /* basic header styles */
-  header .address {
-    display: none;
-  }
   .safe-bar {
     font-size: 19px;
     padding: 7px 10px;
@@ -1517,6 +1634,9 @@ footer figure {
   .phone {
     font-size: 24px;
   }
+  #hero article {
+    background-color: #EAEEF2;
+  }
   .insurance h2:before {
     content: none;
   }
@@ -1525,7 +1645,7 @@ footer figure {
   }
   .count {
     display: block;
-    background-color: #EFF7FC;
+    background-color: #00375D;
     padding: 20px 0;
     margin: 50px 20px 0;
     border-radius: 20px;
@@ -1540,10 +1660,11 @@ footer figure {
   .count article {
     border-radius: 0 0 8px 8px;
     padding: 0 20px 20px;
-    background-color: #2D2D2D;
+    background-color: #00375D;
   }
   .count article ul {
     padding: 0 0 0 10px;
+    margin-left: 5px;
   }
   .count article ul li {
     color: #fff;
@@ -1589,7 +1710,7 @@ footer figure {
   #reviews #review-container {
     flex-wrap: wrap;
     border-radius: 20px;
-    background-color: #155090;
+    background-color: #00375D;
   }
   #reviews #review-container .comment {
     border-radius: 0 0 20px 20px;
@@ -1637,7 +1758,7 @@ footer figure {
     content: "";
     width: 150px;
     height: 2px;
-    color: #155090;
+    color: #00375D;
     position: absolute;
     bottom: 10px;
     margin: auto;
@@ -1662,7 +1783,7 @@ footer figure {
     padding: 0;
   }
   footer .split {
-    margin: 20px;
+    margin: 30px;
     border-radius: 20px;
   }
   footer .split article {
@@ -1733,7 +1854,7 @@ footer figure {
   header .phone {
     font-size: 18px;
     color: #fff;
-    background-color: #155090;
+    background-color: #00375D;
     border: 0;
     display: flex;
     flex-flow: column;
@@ -1899,6 +2020,9 @@ footer figure {
   }
   .copy {
     padding: 30px 10px 20px;
+  }
+  .hours label {
+    width: 120px;
   }
   #hero .caption {
     line-height: 0.7;
