@@ -149,7 +149,7 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
         }
     }
     figure {position: relative;}
-    figure figcaption {position: absolute; right: 0;  width: 300px; text-align: center; padding: 5px 10px; text-transform: uppercase; border-radius: 4px; background-color: rgba(255,255,255,.9); bottom: 0; 
+    figure figcaption {position: absolute; right: 0;  width: 100%;font-weight: 700;letter-spacing: 1.4px;font-size: 18px; text-align: center; padding: 5px 10px; text-transform: uppercase; border-radius: 4px; background-color: rgba(255,255,255,.9); bottom: 0; 
         a {color: $text; font-size: 11px; font-weight: 700; font-family: $font2; letter-spacing: 0.15em;}
     }
     &.alt {
@@ -272,12 +272,12 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 
 #first {margin-top: 20px;}
 
-#banner{overflow:hidden;border-top: 8px solid $primary;
+#banner{overflow:hidden;
     h2{display:flex;align-items:center;position:relative;text-align:center;z-index:2;padding:10px 20px 25px;margin:10px auto -15px; max-width:1160px; justify-content:center; color: $secondary; font-size: 45px; font-weight: 500;}
     h2:before, h2:after{content:'';height:2px;background-color:$secondary;flex:1; margin-top: 5px;}
     h2:before{margin-right:20px}
     h2:after{margin-left:20px}
-  .contain {padding: 50px 20px 30px;}
+  .contain {padding: 30px 20px;}
     .flex-ed {max-width: 1320px; margin: 20px auto 40px; justify-content: space-around; flex-wrap: nowrap;}
 }
 .offer {display: block; margin: 20px 10px; position: relative; text-align: center; filter: drop-shadow(0px 3px 6px rgba(33, 33, 33, 0.15));
@@ -431,7 +431,7 @@ footer{overflow:hidden; padding:40px 0 0;
     h1 {font-size: 60px;}
     #hero article img {margin: 10px auto;}
     .split article {padding: 20px;} 
-    .split h2 {font-size: 50px;}
+    .split h2 {font-size: 46px;}
 }
 @media (max-width: 1024px) {
     header {
@@ -510,17 +510,17 @@ footer{overflow:hidden; padding:40px 0 0;
         ul {display: table; margin:  auto;}
     }
     #reviews{
-        padding:60px 30px; margin-top: 30px;
+        padding:60px 30px; margin-top: 30px;background-color: $secondary;
         #review-container {
-            flex-wrap:wrap; border-radius: 20px;background-color:$secondary;
+            flex-wrap:wrap; border-radius: 20px;background-color:#fff;
             .comment {border-radius: 0 0 20px 20px;padding: 0 20px 60px;
-                p {text-align:center;color: #fff;font-size: 24px;line-height: 30px;}
+                p {text-align:center;color: $text;font-size: 24px;line-height: 30px;}
                 .caption2 {font-size: 18px;width: 100%;
                     margin-top: 10px;}
             }
             #google {flex:0 1 100%; border-radius: 20px 20px 0 0;background:none;
                 .star {margin: 10px auto 20px;}
-                p {margin: 0 auto;color: #fff;}
+                p {margin: 0 auto;color: $text;}
                 p img{margin:0 auto;}
                  > div{margin-top:40px}
             }
@@ -586,7 +586,11 @@ footer{overflow:hidden; padding:40px 0 0;
     #banner {
         .contain{padding: 30px 10px;}
     }
-
+    .count {
+        .h2 {
+            br {display: none;}
+        }
+    }
     #hero {
         h1 {
             span {font-size: 50px;}

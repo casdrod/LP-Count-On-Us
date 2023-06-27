@@ -760,7 +760,10 @@ header #nav #mobile-btns #mobile-special .container small {
 .split figure figcaption {
   position: absolute;
   right: 0;
-  width: 300px;
+  width: 100%;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  font-size: 18px;
   text-align: center;
   padding: 5px 10px;
   text-transform: uppercase;
@@ -967,7 +970,6 @@ header #nav #mobile-btns #mobile-special .container small {
 
 #banner {
   overflow: hidden;
-  border-top: 8px solid #FFA32F;
 }
 #banner h2 {
   display: flex;
@@ -997,7 +999,7 @@ header #nav #mobile-btns #mobile-special .container small {
   margin-left: 20px;
 }
 #banner .contain {
-  padding: 50px 20px 30px;
+  padding: 30px 20px;
 }
 #banner .flex-ed {
   max-width: 1320px;
@@ -1558,7 +1560,7 @@ footer figure {
     padding: 20px;
   }
   .split h2 {
-    font-size: 50px;
+    font-size: 46px;
   }
 }
 @media (max-width: 1024px) {
@@ -1706,11 +1708,12 @@ footer figure {
   #reviews {
     padding: 60px 30px;
     margin-top: 30px;
+    background-color: #00375D;
   }
   #reviews #review-container {
     flex-wrap: wrap;
     border-radius: 20px;
-    background-color: #00375D;
+    background-color: #fff;
   }
   #reviews #review-container .comment {
     border-radius: 0 0 20px 20px;
@@ -1718,7 +1721,7 @@ footer figure {
   }
   #reviews #review-container .comment p {
     text-align: center;
-    color: #fff;
+    color: #0D0D0D;
     font-size: 24px;
     line-height: 30px;
   }
@@ -1737,7 +1740,7 @@ footer figure {
   }
   #reviews #review-container #google p {
     margin: 0 auto;
-    color: #fff;
+    color: #0D0D0D;
   }
   #reviews #review-container #google p img {
     margin: 0 auto;
@@ -1891,6 +1894,9 @@ footer figure {
   }
   #banner .contain {
     padding: 30px 10px;
+  }
+  .count .h2 br {
+    display: none;
   }
   #hero h1 span {
     font-size: 50px;
