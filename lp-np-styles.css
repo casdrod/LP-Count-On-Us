@@ -1287,6 +1287,37 @@ header #nav #mobile-btns #mobile-special .container small {
   text-align: center;
 }
 
+#three-ways {
+  max-width: 1140px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+#three-ways h2 {
+  display: flex;
+  font-weight: 300;
+  font-size: 43px;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  padding: 10px 20px 15px;
+  margin: 10px auto -15px;
+  justify-content: center;
+}
+#three-ways h2:before, #three-ways h2:after {
+  content: "";
+  height: 2px;
+  background-color: #204369;
+  flex: 1;
+}
+#three-ways h2:before {
+  margin-right: 20px;
+}
+#three-ways h2:after {
+  margin-left: 20px;
+}
+
 footer {
   overflow: hidden;
   padding: 40px 0 0;

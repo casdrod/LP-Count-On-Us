@@ -347,7 +347,13 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
     #disclaimer {color:rgba(37, 38, 39,0.4);font:400 16px/1 $font;margin-top:20px;text-align:center}
 }
 
-
+#three-ways {max-width:1140px;margin:auto;padding:20px;text-align:center;
+    h2{display:flex;font-weight: 300;font-size: 43px;align-items:center;position:relative;text-align:center;z-index:2;padding:10px 20px 15px;margin:10px auto -15px;justify-content:center;
+        &:before, &:after{content:'';height:2px;background-color:#204369;flex:1}
+        &:before{margin-right:20px}
+        &:after{margin-left:20px}
+    }
+}
 
 footer{overflow:hidden; padding:40px 0 0;
     h2{font:300 70px/1 $font!important;color:#fff; margin:0 auto 30px;
