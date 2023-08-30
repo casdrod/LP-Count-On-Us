@@ -553,7 +553,7 @@ header #nav #mobile-btns .btn {
   font-size: 16px;
   margin: 0;
   text-transform: uppercase;
-  background-color: #EAEEF2;
+  background-color: #FFA32F;
 }
 header #nav #mobile-btns .btn span {
   width: 100%;
@@ -569,7 +569,7 @@ header #nav #mobile-btns .phone span, header #nav #mobile-btns .btn span {
   width: 100%;
 }
 header #nav #mobile-btns .phone {
-  background-color: #FFA32F;
+  background-color: #EAEEF2;
   color: #000;
   font-size: 20px;
   line-height: 1.3;
@@ -1116,6 +1116,11 @@ header #nav #mobile-btns #mobile-special .container small {
   margin: auto;
   flex-wrap: nowrap;
 }
+#review-container #review-count {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+}
 
 .over {
   width: 100px;
@@ -1322,15 +1327,6 @@ footer {
   overflow: hidden;
   padding: 40px 0 0;
 }
-footer h2 {
-  font: 300 70px/1 "Kumbh Sans", sans-serif !important;
-  color: #fff;
-  margin: 0 auto 30px;
-}
-footer h2 span:last-of-type {
-  font-size: 70px !important;
-  color: #fff !important;
-}
 footer .phy {
   color: #fff;
   font-size: 20px;
@@ -1385,6 +1381,15 @@ footer .split article {
   margin: 0;
   align-self: center;
   border-radius: 8px;
+}
+footer .split article h2 {
+  font: 300 70px/1 "Kumbh Sans", sans-serif;
+  color: #fff;
+  margin: 0 auto 30px;
+}
+footer .split article h2 span:last-of-type {
+  font-size: 70px !important;
+  color: #fff !important;
 }
 footer .split figure p {
   text-align: center;
@@ -1530,6 +1535,11 @@ footer figure {
   width: 200px;
   margin: auto;
   display: table;
+  font-size: 20px;
+  color: #000;
+}
+#lp-appointment-form .submitBtn:hover {
+  color: #fff;
 }
 
 @media (max-width: 1340px) {
@@ -1667,8 +1677,9 @@ footer figure {
   .phone {
     font-size: 24px;
   }
-  #hero article {
-    background-color: #EAEEF2;
+  #hero .flex-ed article {
+    background-color: #E0F3F5;
+    order: -1;
   }
   .insurance h2:before {
     content: none;
@@ -2175,4 +2186,4 @@ footer figure {
   .insurance .flex-ed {
     justify-content: center;
   }
-}/*# sourceMappingURL=lp-np-styles.css.map */
+}/*# sourceMappingURL=lp-count-2023-styles.css.map */
