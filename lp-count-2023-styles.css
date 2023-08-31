@@ -645,7 +645,7 @@ header #nav #mobile-btns #mobile-special .container small {
   box-shadow: 1.6px 2.5px 7px rgba(6, 7, 7, 0.35);
 }
 .fix-nav header .logo img {
-  max-height: 70px;
+  max-height: 100px;
 }
 
 .btn, .btn-alt {
@@ -930,7 +930,7 @@ header #nav #mobile-btns #mobile-special .container small {
   text-transform: uppercase;
   font: 200 59px/63px "Kumbh Sans", sans-serif;
   align-self: center;
-  padding: 40px 15px;
+  padding: 40px;
 }
 .count .h2 span {
   display: block;
