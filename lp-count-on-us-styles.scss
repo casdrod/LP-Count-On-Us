@@ -2,11 +2,11 @@
 .animated{-webkit-animation-duration:2s;animation-duration:2s;-webkit-animation-fill-mode:both;animation-fill-mode:both}@-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.fadeIn{-webkit-animation-name:fadeIn;animation-name:fadeIn}@-webkit-keyframes slideIn{from{transform:translate3d(0,-100%,0)}to{transform:translate3d(0,0,0)}}@keyframes slideIn{from{transform:translate3d(0,-100%,0)}to{transform:translate3d(0,0,0)}}@-webkit-keyframes fadeInUp{from{opacity:0;transform:translate3d(0,100%,0)}to{opacity:1;transform:none}}@keyframes fadeInUp{from{opacity:0;transform:translate3d(0,100%,0)}to{opacity:1;transform:none}}.fadeInUp{-webkit-animation-name:fadeInUp;animation-name:fadeInUp}@-webkit-keyframes fadeInRight{from{opacity:0;transform:translate3d(100%,0,0)}to{opacity:1;transform:none}}@keyframes fadeInRight{from{opacity:0;transform:translate3d(100%,0,0)}to{opacity:1;transform:none}}.fadeInRight{-webkit-animation-name:fadeInRight;animation-name:fadeInRight}@-webkit-keyframes fadeInLeft{from{opacity:0;transform:translate3d(-100%,0,0)}to{opacity:1;transform:none}}@keyframes fadeInLeft{from{opacity:0;transform:translate3d(-100%,0,0)}to{opacity:1;transform:none}}.fadeInLeft{-webkit-animation-name:fadeInLeft;animation-name:fadeInLeft}
 .star:before{font-size: 28px;font-family:'fontello';font-weight:400;margin:0;font-style:normal;content:'\e80f \e80f \e80f \e80f \e80f';color:#FEBB21; letter-spacing: .3em; }
 
-$primary:  #FFA32F;
-$secondary: #00375D;
-$tertiary: #EAEEF2;
-$font: 'Kumbh Sans', sans-serif;
-$font2: 'Kumbh Sans', sans-serif;
+$primary:  #7AC8CF;
+$secondary: #005280;
+$tertiary: #C5D5DE;
+$font: 'Montserrat', sans-serif;
+$font2: 'Montserrat', sans-serif;
 $text: #0D0D0D;
 
 
@@ -54,8 +54,9 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
         i:before {color: $primary;font-size: 22px;margin-left: -10px;margin-right: 15px;}
     }
 	#nav{padding: 20px 10px;display:flex;flex-wrap:wrap;max-width:1350px;justify-content:space-between;margin:auto;align-items:center;
-		.btn{display: flex;flex-wrap: wrap;	justify-content: center;margin:0;padding: 15px 25px;font-size:20px;background-color: $primary;max-width: 470px;color: #000;font-family: $font;font-weight: 600;border-radius: 20px;
-			i:before {margin-right: 10px;}
+		.btn{width: 460px;display: flex;flex-wrap: wrap;justify-content: center;margin:0;padding: 15px 25px;font-size:20px;background-color: $primary;max-width: 470px;color: #000;font-family: $font;font-weight: 700;border-radius: 20px;
+			i:before {margin-right: 25px;
+                margin-top: -2px;}
 			span {display: block;width: 100%;font-size: 44px;text-transform: uppercase;font-weight: 600;}
             &:hover {background-color: $secondary; color: #fff;}
 		}
@@ -135,7 +136,7 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
         &:after {left: auto; top: auto; bottom: -80px; right: -40px}
     }
     article{margin:10px;flex:0 1 600px; text-align: left;  padding: 35px 40px 30px; display: flex;flex-direction: column; justify-content: center;}
-    h2 {margin: 5px auto 25px;font-weight:300;font-size: 55px;
+    h2 {margin: 5px auto 25px;font-weight:600;font-size: 55px;
         span {
             &:last-of-type {display: block;font-weight: 400;font-size: 24px;}
         }
@@ -172,7 +173,7 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
     > * {
       flex: 1 0 500px;
     }
-    .flex-ed {background-color: $tertiary;
+    .flex-ed {background-color: #fff;
         figure {
             margin: 0;
             position: relative;
@@ -221,26 +222,19 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
             small {opacity: 0.4;font-size: 16px;text-transform: uppercase;font-weight: 700;letter-spacing: 1.8px;}
             h1 {
               font-size: 23px;
-              font-weight: 700;
+              font-weight: 600;
               letter-spacing: normal;
               line-height: 1;
               text-align: center;
-              text-transform:uppercase;margin-bottom: 25px;
+              text-transform:uppercase;
               span {
                 display: block;
-                font-weight: 200;
+                font-weight: 600;
                 text-transform:none;
-                font-size: 70px;
+                font-size: 73px;
                 line-height: 1;
                 font-family: $font2;
               }
-              &:after {content: '';margin: 20px auto;
-                  background-color: $primary;
-                  width: 110px;
-                  height: 3px;
-                  position: absolute;
-                  left: 0;
-                  right: 0;}
             }
           }
     }
@@ -258,11 +252,11 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 
 .count {
    background: $secondary; display: flex; max-width: 1120px; margin: 75px auto 50px; border-radius: 8px; box-shadow:1px 1px 12px 5px rgba(0, 0, 0, 0.2);
-   .h2 {flex-wrap: wrap;text-align: center; color: #fff; text-transform:uppercase;font: 200 59px/63px $font2; align-self: center; padding: 40px;
+   .h2 {flex-wrap: wrap;text-align: center; color: #fff; text-transform:uppercase;font: 600 59px/63px $font2; align-self: center; padding: 40px;
         span {display:block;font-style: italic;}
     }
    article {background: #fff; flex: 1;border-radius: 0 8px 8px 0;}
-   ul {font-size: 29px; list-style-type: none; text-align: left; line-height: 1.2; margin: 10px auto 10px 30px; padding: 40px 20px; display: table;
+   ul {font-size: 34px; list-style-type: none; text-align: left; line-height: 1.2; margin: 10px auto 10px 30px; padding: 40px 20px; display: table;
         li {position: relative; padding: 10px 0 10px 40px;
             &:before {content: '\e840';font-family: fontello;color: $primary;position: absolute;left: -10px;top: 4px;
                 font-size: 40px;}
@@ -309,6 +303,11 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 #review-container{position:relative;border-radius: 8px; background: $secondary; box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.16);box-shadow:1.6px 2.5px 7px rgba(7,8,8,0.15);max-width:1120px;color:#fff;align-items:center;padding:0;margin:auto;flex-wrap:nowrap; 
     #review-count {position: absolute;top: -50px;left: -50px;}
 }
+
+#about {
+    h2 {font-size: 40px;;}
+}
+
 .over {width: 100px; height: 100px; border-radius: 50%; color: #fff; font: 700 18px/.9 $font; text-transform: uppercase;
     box-shadow: 2px 3px 13px rgba(3, 47, 42, 0.2); 
     background-color: $primary; text-align: center; padding: 15px 10px 10px; height: 80px; width: 80px; display: flex;
@@ -322,7 +321,7 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
      p{color:#fff;font-size:20px;line-height:1.25;display:block;margin-top:15px;font-size:15px;text-transform: uppercase; color: $text; font-weight: 600; font-family: $font; letter-spacing: 1.5px; }
 }
 
-.comment{flex:1 1 900px;padding:50px 50px 60px;text-align:left;margin:auto;
+.comment{flex:1 1 900px;padding:30px 50px 40px;text-align:left;margin:auto;
     p{font:400 30px/40px $font;margin-top:30px;margin-bottom:10px;color:#fff; letter-spacing: 0.05em;line-height: 45px;}
     .caption2{float:right;font:600 normal 16px/1 $font; letter-spacing: 0.15em; text-transform:uppercase;margin:5px 0 0}
 }
@@ -335,7 +334,7 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
         small {opacity: 0.4;}
         .btn {font-size: 20px; border-radius: 0;}
     }
-    h2{display:flex;font-weight: 300;font-size: 43px;align-items:center;position:relative;text-align:center;z-index:2;padding:10px 20px 15px;margin:10px auto -15px;justify-content:center;
+    h2{display:flex;font-size: 43px;align-items:center;position:relative;text-align:center;z-index:2;padding:10px 20px 15px;margin:10px auto -15px;justify-content:center;
         &:before, &:after{content:'';height:2px;background-color:#204369;flex:1}
         &:before{margin-right:20px}
         &:after{margin-left:20px}
@@ -368,7 +367,7 @@ footer{overflow:hidden; padding:40px 0 0;
     }
     .split{justify-content:space-between;max-width:1160px; padding: 0; align-items:flex-start;margin:auto;margin-bottom:70px;
         article{flex: 0 1 500px; background-color: $secondary;padding:85px 60px; margin: 0; align-self: center; border-radius: 8px;
-            h2{font:300 70px/1 $font;color:#fff; margin:0 auto 30px;
+            h2{font:600 70px/1 $font;color:#fff; margin:0 auto 30px;
                 span {
                     &:last-of-type {font-size: 70px!important;color: #fff!important;}
                 }
@@ -390,8 +389,9 @@ footer{overflow:hidden; padding:40px 0 0;
 }
 
 
-.copy {margin-top:20px;padding:40px 10px 20px; background-color:#0D0D0D; margin:auto;text-transform:uppercase; font:400 11px/1.4 $font; color:#fff; letter-spacing: normal;
-   a, p {font:400 11px/1.4 $font; color:#fff; letter-spacing: normal;}
+.copy {margin-top:20px;padding:40px 10px 20px; background-color:#0D0D0D; margin:auto;text-transform:uppercase; font:600 11px/1.4 $font; color:#fff; letter-spacing: normal;
+   a, p {font:600 11px/1.4 $font;letter-spacing: normal;color:#fff; }
+   a {color:$primary; }
     p {margin: 20px auto; max-width: 1090px; letter-spacing: normal;}
     a:hover{color:$primary;text-decoration:underline}
     span {margin: 0 2px;}
@@ -440,7 +440,7 @@ footer{overflow:hidden; padding:40px 0 0;
     .over { top: -60px; left: 5px; }
     h1 {font-size: 60px;}
     #hero article img {margin: 10px auto;}
-    .split article {padding: 20px;} 
+    .split article {padding: 20px 10px;} 
     .split h2 {font-size: 46px;}
 }
 @media (max-width: 1024px) {
@@ -488,7 +488,8 @@ footer{overflow:hidden; padding:40px 0 0;
     .phone{font-size:24px; }
     #hero {
         .flex-ed {
-            article {background-color: #E0F3F5;order: -1;}
+            article {order: -1;}
+            figure {.caption {display:none;}}
         }
     }
     .insurance h2 {
@@ -497,7 +498,7 @@ footer{overflow:hidden; padding:40px 0 0;
     }
 
     .count {display: block;background-color: $secondary;padding: 20px 0;margin: 50px 20px 0; border-radius: 20px;
-        .h2 {padding: 20px; font-size: 50px;
+        .h2 {padding: 20px 10px; font-size: 50px;
             span {display:inline;}
         }
         article {border-radius: 0 0 8px 8px; padding: 0 20px 20px;background-color: $secondary;
@@ -664,7 +665,7 @@ footer{overflow:hidden; padding:40px 0 0;
     }
     .frame{display:none;}
     .copy{padding:30px 10px 20px}
-    .hours label {width: 120px;}
+    .hours label {width: 100px;}
     #hero .caption {line-height: .7; position: static; padding: 10px;transform: none; max-width: 100%;}
 }
 @media (max-width: 480px) {
@@ -673,7 +674,7 @@ footer{overflow:hidden; padding:40px 0 0;
     .btn-alt span {font-size: 24px;}
     .over {top: -50px}
     .offer {padding: 0;}
-    .count .h2 {font-size: 12vw;}
+    .count .h2 {font-size: 10vw;}
     .count ul {padding: 0;}
     
 }
@@ -691,19 +692,22 @@ footer{overflow:hidden; padding:40px 0 0;
     }
     #hero .caption a {display: block;}
     .caption a {font-size: 14px;}
-    .count ul {font-size: 20px;}
+    .count ul {font-size: 23px;
+        li {padding-top: 8px;}
+    }
     .comment p{font-size:16px;letter-spacing:1px}
     .comment .caption2{font-size:15px}
     .offer .h1 {font-size: 45px;}
     .offer .h3 {font-size: 18px;}
-    .split ul li {font-size: 20px;}
+    .split ul li {font-size: 22px;}
     h2 {font-size: 30px;}
-    footer .split h2 {font-size: 12vw; padding: 0}
+    footer .split article h2 {font-size: 54px; padding: 0}
     #google p{font-size:14px}
     footer .pho {font-size: 30px; margin-top: 20px; 
         &:before {top: 0;}
     }
     .hours:before {top: 10px;}
+    .hours {padding-left: 30px;}
     footer .split p {font-size: 16px;}
     .insurance {
         h2{margin:10px 0 -15px;padding:10px 0 15px}
