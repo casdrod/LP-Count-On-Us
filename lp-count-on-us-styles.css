@@ -860,7 +860,7 @@ header #nav #mobile-btns #mobile-special .container small {
   order: 2;
   position: relative;
   z-index: 2;
-  padding: 10px;
+  padding: 35px 10px;
   display: flex;
   margin: auto;
   flex: 0 1 600px;
@@ -2151,8 +2151,24 @@ footer figure {
   .offer .h3 {
     font-size: 18px;
   }
+  footer .phy {
+    font-size: 18px;
+  }
+  footer .phy:before {
+    left: 7px;
+  }
+  footer .pho {
+    padding-left: 10px;
+  }
+  footer .pho:before {
+    left: -26px;
+  }
   .split ul li {
     font-size: 22px;
+    padding-left: 45px;
+  }
+  .split ul li:before {
+    left: 5px;
   }
   h2 {
     font-size: 30px;
@@ -2191,4 +2207,24 @@ footer figure {
   .insurance .flex-ed {
     justify-content: center;
   }
-}/*# sourceMappingURL=lp-count-2023-styles.css.map */
+}
+@media (max-width: 350px) {
+  footer .split article h2 {
+    font-size: 46px;
+  }
+  footer .pho {
+    font-size: 26px;
+    margin: 0;
+    text-align: center;
+  }
+  footer .pho:before {
+    left: -3px;
+    font-size: 26px;
+  }
+  header #nav #mobile-btns .phone {
+    font-size: 18px;
+  }
+  header #nav #mobile-btns .btn {
+    font-size: 13px;
+  }
+}/*# sourceMappingURL=lp-count-on-us-styles.css.map */

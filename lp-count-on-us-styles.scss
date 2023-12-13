@@ -208,7 +208,7 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
             order: 2;
             position: relative;
             z-index: 2;
-            padding: 10px;
+            padding: 35px 10px;
             display: flex;
             margin: auto;
             flex: 0 1 600px;
@@ -699,7 +699,15 @@ footer{overflow:hidden; padding:40px 0 0;
     .comment .caption2{font-size:15px}
     .offer .h1 {font-size: 45px;}
     .offer .h3 {font-size: 18px;}
-    .split ul li {font-size: 22px;}
+    footer .phy {font-size: 18px;
+        &:before {left: 7px;}
+    }
+    footer .pho {padding-left: 10px;
+        &:before {left: -26px;}
+    }
+    .split ul li {font-size: 22px;padding-left: 45px;
+        &:before {left: 5px;}
+    }
     h2 {font-size: 30px;}
     footer .split article h2 {font-size: 54px; padding: 0}
     #google p{font-size:14px}
@@ -714,4 +722,12 @@ footer{overflow:hidden; padding:40px 0 0;
         .flex-ed div{margin:15px 18px;flex:1 1 100%}
     }
     .insurance .flex-ed {justify-content: center;}
+}
+@media (max-width: 350px) {
+    footer .split article h2 {font-size: 46px;}
+    footer .pho {font-size: 26px;margin: 0;text-align: center;
+        &:before {left: -3px;font-size: 26px;}
+    }
+    header #nav #mobile-btns .phone {font-size: 18px;}
+    header #nav #mobile-btns .btn {font-size: 13px;}
 }
