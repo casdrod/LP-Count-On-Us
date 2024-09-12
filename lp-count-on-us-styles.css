@@ -1161,8 +1161,7 @@ header #nav #mobile-btns #mobile-special .container small {
   padding: 80px 30px;
   margin-top: 60px;
 }
-
-#review-container {
+#reviews #review-container {
   height: 418px;
   position: relative;
   box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.16);
@@ -1175,47 +1174,14 @@ header #nav #mobile-btns #mobile-special .container small {
   margin: auto;
   flex-wrap: nowrap;
 }
-#review-container:before {
+#reviews #review-container:before {
   content: url(assets/images/extra-border-reviews.png);
   position: absolute;
   left: -9px;
   z-index: -1;
   top: -11px;
 }
-
-.over {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  color: #fff;
-  font: 700 18px/0.9 "roboto", sans-serif;
-  text-transform: uppercase;
-  box-shadow: 2px 3px 13px rgba(3, 47, 42, 0.2);
-  background-color: #B88C1E;
-  text-align: center;
-  padding: 15px 10px 10px;
-  height: 80px;
-  width: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: -20px;
-  left: -50px;
-}
-.over span {
-  display: block;
-  font-size: 28px;
-}
-.over small {
-  display: block;
-  font-size: 12px;
-  letter-spacing: -0.4px;
-  margin-bottom: 5px;
-}
-
-#google {
+#reviews #review-container #google {
   background-color: #fff;
   flex: 0 1 225px;
   align-self: stretch;
@@ -1225,14 +1191,14 @@ header #nav #mobile-btns #mobile-special .container small {
   justify-content: center;
   border-radius: 8px 0 0 8px;
 }
-#google img {
+#reviews #review-container #google img {
   padding: 10px 0 15px;
 }
-#google > div {
+#reviews #review-container #google > div {
   margin-top: 25px;
   padding: 5px 25px;
 }
-#google p {
+#reviews #review-container #google p {
   color: #fff;
   font-size: 20px;
   line-height: 1.25;
@@ -1245,8 +1211,7 @@ header #nav #mobile-btns #mobile-special .container small {
   font-family: "roboto", sans-serif;
   letter-spacing: 1.5px;
 }
-
-.comment {
+#reviews #review-container .comment {
   flex: 1 1 900px;
   padding: 30px 50px 57px;
   text-align: left;
@@ -1254,7 +1219,7 @@ header #nav #mobile-btns #mobile-special .container small {
   background: #fff;
   border-radius: 0 8px 8px 0;
 }
-.comment p {
+#reviews #review-container .comment p {
   font: 400 36px/41px "roboto", sans-serif;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -1262,7 +1227,7 @@ header #nav #mobile-btns #mobile-special .container small {
   letter-spacing: 0.05em;
   line-height: 45px;
 }
-.comment .caption2 {
+#reviews #review-container .comment .caption2 {
   float: right;
   font: 600 normal 16px/1 "roboto", sans-serif;
   letter-spacing: 0.15em;
@@ -1364,8 +1329,22 @@ footer .split article h2 span:last-of-type {
   font-size: 70px !important;
   color: #fff !important;
 }
-footer .split figure p {
-  text-align: center;
+footer .split figure {
+  flex: 1 1 650px;
+  align-self: center;
+}
+footer .split figure .frame {
+  overflow: hidden;
+  display: table;
+  width: 100%;
+  margin: auto;
+  flex: 0 1 50%;
+}
+footer .split figure .frame iframe {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 420px;
 }
 footer .split #contact h2, footer .split #hours h2 {
   text-transform: uppercase;
@@ -1405,54 +1384,6 @@ footer .split #hours > div span label {
 footer .split #hours > div span > span {
   display: block;
   text-align: right;
-}
-footer figure {
-  flex: 1 1 650px;
-  align-self: center;
-}
-
-.hours {
-  display: table;
-  margin: 0;
-  text-align: left !important;
-  position: relative;
-  padding-left: 40px;
-}
-.hours:before {
-  position: absolute;
-  left: 0;
-  top: 25px;
-  font-family: fontello;
-  content: "\e839";
-  color: #B88C1E;
-  font-size: 30px;
-}
-
-.hours label {
-  width: 131px;
-  display: inline-block;
-  font-weight: 600;
-}
-
-.hours p {
-  font-size: 20px;
-  color: #fff;
-  line-height: 34px;
-  font-family: "roboto", sans-serif;
-}
-
-.frame {
-  overflow: hidden;
-  display: table;
-  width: 100%;
-  margin: auto;
-  flex: 0 1 50%;
-}
-.frame iframe {
-  display: block;
-  margin: auto;
-  width: 100%;
-  max-width: 420px;
 }
 
 .copy {
@@ -1551,6 +1482,7 @@ footer figure {
   display: table;
 }
 
+/* -- MEDIA QUERIES -- */
 @media (max-width: 1340px) {
   #hero figure {
     margin: auto;

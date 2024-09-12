@@ -241,28 +241,7 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
         margin: 0;
       }
     }
-  }
-
-
-//   .box {
-//     position: relative;
-//     }
-//     .box:after, .box:before {
-//      content: '';
-//      position: absolute;
-//      inset: -9px;
-//     }
-//     .box:after {
-//      border-top: 7px solid $secondary;
-//      border-bottom: 7px solid $secondary;
-//      border-left: 1px solid $secondary;
-//      border-right: 1px solid $secondary;
-//     }
-//     .box:before {
-//      border-left: 5px solid;
-//      border-right: 5px solid;
-//      border-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 20%, rgba(255,255,255,0) 20%,rgba(255,255,255,0) 80%, rgba(0,0,0,1) 80%, rgba(0,0,0,1) 100%);
-//     }
+}
 
 
 .count {background: #fff; max-width: 963px; height: 324px;align-content: center;padding: 15px 0 20px;margin: 75px auto 50px; box-shadow:1px 1px 12px 5px rgba(0, 0, 0, 0.2);position: relative;
@@ -290,16 +269,16 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 #first {margin-top: 40px;}
 
 #banner{overflow:hidden;border-top: 8px solid $primary;
-    h2{display:flex;align-items:center;position:relative;text-align:center;z-index:2;padding:10px 20px 25px;margin:10px auto -15px; max-width:1160px; justify-content:center; color: $secondary; font-size: 45px; font-weight: 500;}
-    h2:before, h2:after{content:'';height:2px;background-color:$secondary;flex:1; margin-top: 5px;}
-    h2:before{margin-right:20px}
-    h2:after{margin-left:20px}
-  .contain {padding: 50px 20px 30px;}
+    h2{display:flex;align-items:center;position:relative;text-align:center;z-index:2;padding:10px 20px 25px;margin:10px auto -15px; max-width:1160px; justify-content:center; color: $secondary; font-size: 45px; font-weight: 500;
+        &:before, &:after {content:'';height:2px;background-color:$secondary;flex:1; margin-top: 5px;}
+        &:before {margin-right:20px;}
+        &:after {margin-left:20px;}
+    }
+    .contain {padding: 50px 20px 30px;}
     .flex-ed {max-width: 1320px; margin: 20px auto 40px; justify-content: space-around; flex-wrap: nowrap;}
 }
-.offer {display: block; margin: 20px 10px; position: relative; text-align: center; filter: drop-shadow(0px 3px 6px rgba(33, 33, 33, 0.15));
-  flex:0 350px; padding: 0; display: flex; flex-direction: row; 
-    article {align-self: center;     margin: 0 0 0 auto; padding: 50px 20px;  position: relative; z-index: 3;}
+.offer {display: block; margin: 20px 10px; position: relative; text-align: center; filter: drop-shadow(0px 3px 6px rgba(33, 33, 33, 0.15));flex:0 350px; padding: 0; display: flex; flex-direction: row; 
+    article {align-self: center; margin: 0 0 0 auto; padding: 50px 20px;  position: relative; z-index: 3;}
     >span{align-self: flex-end; order: -1; position: absolute; left: 0; right: 0; top: 0;}
     .h1 {color: #973e32; font: 600 60px/1.1 $font2; letter-spacing: normal; text-transform: uppercase;
         sup { small {display: inline-block; font-size: 16px;     line-height: 1; letter-spacing: 0.4px; text-transform: none; text-align: left;}}
@@ -322,27 +301,21 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 }
 
 
-#reviews{background: url(assets/images/lp-count-review-bkg.jpg);background-repeat: no-repeat;background-size: cover; padding:80px 30px; margin-top: 60px;}
-#review-container{height: 418px; position:relative; box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.16);box-shadow:1.6px 2.5px 7px rgba(7,8,8,0.15);max-width:1130px;color:#fff;z-index: 100;align-items:center;padding:0;margin:auto;flex-wrap:nowrap;
-    &:before {content: url(assets/images/extra-border-reviews.png);position: absolute;left: -9px;z-index: -1;top: -11px;}
-}
-.over {width: 100px; height: 100px; border-radius: 50%; color: #fff; font: 700 18px/.9 $font; text-transform: uppercase;
-    box-shadow: 2px 3px 13px rgba(3, 47, 42, 0.2); 
-    background-color: $primary; text-align: center; padding: 15px 10px 10px; height: 80px; width: 80px; display: flex;
-    flex-direction: column; justify-content: center; align-items: center; position: absolute; top: -20px; left: -50px;
-    span {display: block; font-size: 28px; }
-    small {display: block; font-size: 12px; letter-spacing: -.4px; margin-bottom: 5px;}
-}
-#google{background-color:#fff;flex:0 1 225px;align-self:stretch;text-align:center;display:flex;flex-direction:column;justify-content:center; border-radius: 8px 0 0 8px;
-    img{padding:10px 0 15px}
-     > div{margin-top:25px;padding:5px 25px}
-     p{color:#fff;font-size:20px;line-height:1.25;display:block;margin-top:15px;font-size:15px;text-transform: uppercase; color: $text; font-weight: 600; font-family: $font; letter-spacing: 1.5px; }
+#reviews{background: url(assets/images/lp-count-review-bkg.jpg);background-repeat: no-repeat;background-size: cover; padding:80px 30px; margin-top: 60px;
+    #review-container{height: 418px; position:relative; box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.16);box-shadow:1.6px 2.5px 7px rgba(7,8,8,0.15);max-width:1130px;color:#fff;z-index: 100;align-items:center;padding:0;margin:auto;flex-wrap:nowrap;
+        &:before {content: url(assets/images/extra-border-reviews.png);position: absolute;left: -9px;z-index: -1;top: -11px;}
+        #google{background-color:#fff;flex:0 1 225px;align-self:stretch;text-align:center;display:flex;flex-direction:column;justify-content:center; border-radius: 8px 0 0 8px;
+            img{padding:10px 0 15px}
+             > div{margin-top:25px;padding:5px 25px}
+             p{color:#fff;font-size:20px;line-height:1.25;display:block;margin-top:15px;font-size:15px;text-transform: uppercase; color: $text; font-weight: 600; font-family: $font; letter-spacing: 1.5px; }
+        }
+        .comment{flex:1 1 900px;padding:30px 50px 57px;text-align:left;margin:auto;background: #fff;border-radius: 0 8px 8px 0;
+            p{font:400 36px/41px $font;margin-top:30px;margin-bottom:10px;color:$text; letter-spacing: 0.05em;line-height: 45px;}
+            .caption2{float:right;font:600 normal 16px/1 $font; letter-spacing: 0.15em; text-transform:uppercase;margin:5px 0 0}
+        }
+    }
 }
 
-.comment{flex:1 1 900px;padding:30px 50px 57px;text-align:left;margin:auto;background: #fff;border-radius: 0 8px 8px 0;
-    p{font:400 36px/41px $font;margin-top:30px;margin-bottom:10px;color:$text; letter-spacing: 0.05em;line-height: 45px;}
-    .caption2{float:right;font:600 normal 16px/1 $font; letter-spacing: 0.15em; text-transform:uppercase;margin:5px 0 0}
-}
 
 .insurance{text-align:left;padding:0;position:relative;overflow:hidden;
     .container{max-width:1140px;margin:auto;padding:20px;text-align:center;
@@ -363,7 +336,6 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 }
 
 
-
 footer{overflow:hidden; padding:100px 0 0;background: url(assets/images/lp-count-footer-bkg.jpg);background-size: cover;background-repeat: no-repeat;
     .split{justify-content:space-between; padding: 0; align-items:center;margin:auto;margin-bottom:70px;max-width: 1500px;
         article{flex: 0 1 500px; background-color: $secondary;padding:85px 60px; margin: 0; align-self: center; border-radius: 8px;
@@ -373,7 +345,11 @@ footer{overflow:hidden; padding:100px 0 0;background: url(assets/images/lp-count
                 }
             }
         }
-        figure p {text-align: center;}
+        figure {flex:1 1 650px; align-self: center;
+            .frame{overflow:hidden;display:table;width:100%;margin:auto; flex: 0 1 50%;
+                iframe{display:block;margin:auto;width:100%;max-width: 420px;}
+            }
+        }
         #contact, #hours {
                 h2 {text-transform: uppercase;font-size: 20px;color: #fff;font-family: $font;letter-spacing: 2px;}
                 .address {width: 100%;
@@ -395,17 +371,6 @@ footer{overflow:hidden; padding:100px 0 0;background: url(assets/images/lp-count
             }
         }
     }
-    figure{flex:1 1 650px; align-self: center;}
-}
-
-.hours {display: table; margin: 0; text-align: left!important; position: relative; padding-left: 40px;
-    &:before {position: absolute; left: 0; top: 25px; font-family: fontello; content: '\e839'; color: $primary;  font-size: 30px;}
-    ;}
-.hours label {width:131px; display: inline-block; font-weight: 600;}
-.hours p {font-size:20px; color: #fff; line-height: 34px; font-family: $font;}
-
-.frame{overflow:hidden;display:table;width:100%;margin:auto; flex: 0 1 50%;
-    iframe{display:block;margin:auto;width:100%;max-width: 420px;}
 }
 
 
@@ -434,6 +399,10 @@ footer{overflow:hidden; padding:100px 0 0;background: url(assets/images/lp-count
     textarea:focus, input:focus, button:focus, select:focus{outline-style:solid;outline-width:thin;outline-color:$secondary}
     .submitBtn{text-align:center;width:200px;margin:auto;display:table}
 }
+
+
+
+/* -- MEDIA QUERIES -- */
 @media (max-width: 1340px) {
     #hero figure {margin: auto;}
 }
