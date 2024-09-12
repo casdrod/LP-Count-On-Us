@@ -346,7 +346,7 @@ footer {
     font-size: 13px;
     font-weight: 700;
     font-family: "Montserrat", sans-serif;
-    background-color: #00314d;
+    background-color: #005280;
     color: #fff;
     text-transform: uppercase;
   }
@@ -358,7 +358,7 @@ footer {
     margin-left: 7px;
   }
   #fixed-tabs a:nth-of-type(2) {
-    background-color: #55b9c1;
+    background-color: #7AC8CF;
   }
   #fixed-tabs .ra {
     flex: 2;
@@ -1191,8 +1191,6 @@ header #nav #mobile-btns #mobile-special .container small {
   margin-top: 30px;
   margin-bottom: 10px;
   color: #fff;
-  letter-spacing: 0.05em;
-  line-height: 45px;
 }
 .comment .caption2 {
   float: right;
@@ -1848,8 +1846,11 @@ footer figure {
   footer .pho:before {
     left: -12px;
   }
+  footer .phy {
+    padding-left: 10px;
+  }
   footer .phy:before {
-    left: 13px;
+    left: -22px;
   }
   .hours {
     padding-left: 0;
@@ -2168,15 +2169,6 @@ footer figure {
   footer .phy {
     font-size: 18px;
   }
-  footer .phy:before {
-    left: 7px;
-  }
-  footer .pho {
-    padding-left: 10px;
-  }
-  footer .pho:before {
-    left: -26px;
-  }
   .split ul li {
     font-size: 22px;
     padding-left: 45px;
@@ -2197,12 +2189,15 @@ footer figure {
   footer .pho {
     font-size: 30px;
     margin-top: 20px;
+    padding-left: 10px;
   }
   footer .pho:before {
     top: 0;
+    left: -26px;
   }
   .hours:before {
     top: 10px;
+    left: -12px;
   }
   .hours {
     padding-left: 30px;
