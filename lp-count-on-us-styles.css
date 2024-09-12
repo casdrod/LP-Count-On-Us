@@ -999,93 +999,65 @@ header #nav #mobile-btns #mobile-special .container small {
   flex-wrap: nowrap;
 }
 
-.offer {
-  display: block;
-  margin: 20px 10px;
+#insurance {
+  text-align: left;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+#insurance .container {
+  max-width: 1140px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+#insurance .container h2 {
+  display: flex;
+  font-size: 43px;
+  align-items: center;
   position: relative;
   text-align: center;
-  filter: drop-shadow(0px 3px 6px rgba(33, 33, 33, 0.15));
-  flex: 0 350px;
-  padding: 0;
+  z-index: 2;
+  padding: 10px 20px 15px;
+  margin: 10px auto -15px;
+  justify-content: center;
+}
+#insurance .container h2:before, #insurance .container h2:after {
+  content: "";
+  height: 2px;
+  background-color: #204369;
+  flex: 1;
+}
+#insurance .container h2:before {
+  margin-right: 20px;
+}
+#insurance .container h2:after {
+  margin-left: 20px;
+}
+#insurance .container p {
+  line-height: 32px;
+  max-width: 1100px;
+  margin: 10px auto;
+  padding: 10px;
+}
+#insurance .container #insurance-list {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-.offer article {
-  align-self: center;
-  margin: 0 0 0 auto;
-  padding: 50px 20px;
-  position: relative;
-  z-index: 3;
+#insurance .container #insurance-list span {
+  display: flex;
+  margin: 10px auto;
+  align-items: center;
 }
-.offer > span {
-  align-self: flex-end;
-  order: -1;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
+#insurance .container small {
+  opacity: 0.4;
 }
-.offer .h1 {
-  color: #973e32;
-  font: 600 60px/1.1 "Montserrat", sans-serif;
-  letter-spacing: normal;
-  text-transform: uppercase;
-}
-.offer .h1 sup small {
-  display: inline-block;
-  font-size: 16px;
-  line-height: 1;
-  letter-spacing: 0.4px;
-  text-transform: none;
-  text-align: left;
-}
-.offer p {
-  font-size: 15px;
-  font-weight: 400;
-  margin: 0 auto 15px;
-  line-height: 1.1;
-  letter-spacing: 0.03em;
-}
-.offer img {
-  margin: auto auto 0;
-}
-.offer:last-of-type article, .offer:nth-of-type(3) article {
-  margin: 0 auto 0 0;
-}
-.offer:last-of-type > span, .offer:nth-of-type(3) > span {
-  margin: 0 auto 0 0;
-}
-.offer .h2 {
-  font: 700 60px/1.1 "Montserrat", sans-serif;
-  color: #7AC8CF;
-  letter-spacing: -0.02em;
-  margin-bottom: 0;
-}
-.offer .h4 {
-  color: #005280;
-}
-.offer .asterisk {
-  color: #0D0D0D;
-  font-weight: 400;
-  font-size: 20px;
-  top: -1.4em;
-  padding-left: 5px;
-}
-.offer:last-of-type article {
-  margin-bottom: 10px;
-}
-.offer:nth-of-type(2) article {
-  padding-top: 10px;
-}
-.offer:nth-of-type(2) article .h3 {
-  font-size: 27px;
-}
-.offer .offer-note {
-  font-size: 7px;
-  letter-spacing: -0.17px;
-  line-height: 1.14;
-  padding-left: 40px;
-  margin-top: 55px;
+#insurance .container #disclaimer {
+  color: rgba(37, 38, 39, 0.4);
+  font: 400 16px/1 "Montserrat", sans-serif;
+  margin-top: 20px;
+  text-align: center;
 }
 
 #reviews {
@@ -1093,8 +1065,7 @@ header #nav #mobile-btns #mobile-special .container small {
   padding: 80px 30px;
   margin-top: 60px;
 }
-
-#review-container {
+#reviews #review-container {
   position: relative;
   border-radius: 8px;
   background: #005280;
@@ -1107,49 +1078,7 @@ header #nav #mobile-btns #mobile-special .container small {
   margin: auto;
   flex-wrap: nowrap;
 }
-#review-container #review-count {
-  position: absolute;
-  top: -50px;
-  left: -50px;
-}
-
-#about h2 {
-  font-size: 40px;
-}
-
-.over {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  color: #fff;
-  font: 700 18px/0.9 "Montserrat", sans-serif;
-  text-transform: uppercase;
-  box-shadow: 2px 3px 13px rgba(3, 47, 42, 0.2);
-  background-color: #7AC8CF;
-  text-align: center;
-  padding: 15px 10px 10px;
-  height: 80px;
-  width: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: -20px;
-  left: -50px;
-}
-.over span {
-  display: block;
-  font-size: 28px;
-}
-.over small {
-  display: block;
-  font-size: 12px;
-  letter-spacing: -0.4px;
-  margin-bottom: 5px;
-}
-
-#google {
+#reviews #review-container #google {
   background-color: #fff;
   flex: 0 1 225px;
   align-self: stretch;
@@ -1159,14 +1088,14 @@ header #nav #mobile-btns #mobile-special .container small {
   justify-content: center;
   border-radius: 8px 0 0 8px;
 }
-#google img {
+#reviews #review-container #google img {
   padding: 15px 0;
 }
-#google > div {
+#reviews #review-container #google > div {
   margin-top: 25px;
   padding: 5px 25px;
 }
-#google p {
+#reviews #review-container #google p {
   color: #fff;
   font-size: 20px;
   line-height: 1.25;
@@ -1179,20 +1108,19 @@ header #nav #mobile-btns #mobile-special .container small {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 1.5px;
 }
-
-.comment {
+#reviews #review-container .comment {
   flex: 1 1 900px;
   padding: 30px 50px 40px;
   text-align: left;
   margin: auto;
 }
-.comment p {
+#reviews #review-container .comment p {
   font: 400 30px/40px "Montserrat", sans-serif;
   margin-top: 30px;
   margin-bottom: 10px;
   color: #fff;
 }
-.comment .caption2 {
+#reviews #review-container .comment .caption2 {
   float: right;
   font: 600 normal 16px/1 "Montserrat", sans-serif;
   letter-spacing: 0.15em;
@@ -1200,88 +1128,8 @@ header #nav #mobile-btns #mobile-special .container small {
   margin: 5px 0 0;
 }
 
-.insurance {
-  text-align: left;
-  padding: 0;
-  position: relative;
-  overflow: hidden;
-}
-.insurance .container {
-  max-width: 1140px;
-  margin: auto;
-  padding: 20px;
-  text-align: center;
-}
-.insurance .container #insurance-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-.insurance .container #insurance-list span {
-  display: flex;
-  margin: 10px auto;
-  align-items: center;
-}
-.insurance .container small {
-  opacity: 0.4;
-}
-.insurance .container .btn {
-  font-size: 20px;
-  border-radius: 0;
-}
-.insurance h2 {
-  display: flex;
-  font-size: 43px;
-  align-items: center;
-  position: relative;
-  text-align: center;
-  z-index: 2;
-  padding: 10px 20px 15px;
-  margin: 10px auto -15px;
-  justify-content: center;
-}
-.insurance h2:before, .insurance h2:after {
-  content: "";
-  height: 2px;
-  background-color: #204369;
-  flex: 1;
-}
-.insurance h2:before {
-  margin-right: 20px;
-}
-.insurance h2:after {
-  margin-left: 20px;
-}
-.insurance #insurance-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-.insurance .flex-ed {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.insurance .flex-ed span {
-  padding: 10px 8px;
-  flex: 0 1 auto;
-  margin: auto;
-}
-.insurance .flex-ed:first-of-type {
-  max-width: 1000px;
-}
-.insurance p {
-  line-height: 32px;
-  max-width: 1100px;
-  margin: 10px auto;
-  padding: 10px;
-}
-.insurance #disclaimer {
-  color: rgba(37, 38, 39, 0.4);
-  font: 400 16px/1 "Montserrat", sans-serif;
-  margin-top: 20px;
-  text-align: center;
+#about h2 {
+  font-size: 40px;
 }
 
 #three-ways {
@@ -1319,45 +1167,6 @@ footer {
   overflow: hidden;
   padding: 40px 0 0;
 }
-footer .phy {
-  color: #fff;
-  font-size: 20px;
-  display: block;
-  position: relative;
-  padding-left: 40px;
-}
-footer .phy:before {
-  position: absolute;
-  left: 0;
-  top: 8px;
-  font-family: fontello;
-  content: "\e809";
-  color: #7AC8CF;
-  font-size: 22px;
-}
-footer .phy:hover {
-  color: #7AC8CF;
-}
-footer .pho {
-  color: #fff;
-  display: block;
-  position: relative;
-  font: 600 35px/1.1 "Montserrat", sans-serif;
-  margin: 35px 0 20px;
-  padding-left: 40px;
-}
-footer .pho:before {
-  position: absolute;
-  left: 0px;
-  top: 3px;
-  font-family: fontello;
-  content: "\e80b";
-  color: #7AC8CF;
-  font-size: 30px;
-}
-footer .pho:hover {
-  color: #7AC8CF;
-}
 footer .split {
   justify-content: space-between;
   max-width: 1160px;
@@ -1383,23 +1192,53 @@ footer .split article h2 span:last-of-type {
   font-size: 70px !important;
   color: #fff !important;
 }
-footer .split figure p {
-  text-align: center;
+footer .split article .phy {
+  color: #fff;
+  font-size: 20px;
+  display: block;
+  position: relative;
+  padding-left: 40px;
 }
-footer figure {
-  flex: 1 1 650px;
-  align-self: center;
-  order: 1;
+footer .split article .phy:before {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  font-family: fontello;
+  content: "\e809";
+  color: #7AC8CF;
+  font-size: 22px;
 }
-
-.hours {
+footer .split article .phy:hover {
+  color: #7AC8CF;
+}
+footer .split article .pho {
+  color: #fff;
+  display: block;
+  position: relative;
+  font: 600 35px/1.1 "Montserrat", sans-serif;
+  margin: 35px 0 20px;
+  padding-left: 40px;
+}
+footer .split article .pho:before {
+  position: absolute;
+  left: 0px;
+  top: 3px;
+  font-family: fontello;
+  content: "\e80b";
+  color: #7AC8CF;
+  font-size: 30px;
+}
+footer .split article .pho:hover {
+  color: #7AC8CF;
+}
+footer .split article .hours {
   display: table;
   margin: 0;
   text-align: left !important;
   position: relative;
   padding-left: 40px;
 }
-.hours:before {
+footer .split article .hours:before {
   position: absolute;
   left: 0;
   top: 25px;
@@ -1408,28 +1247,30 @@ footer figure {
   color: #7AC8CF;
   font-size: 30px;
 }
-
-.hours label {
+footer .split article .hours label {
   width: 131px;
   display: inline-block;
   font-weight: 600;
 }
-
-.hours p {
+footer .split article .hours p {
   font-size: 20px;
   color: #fff;
   line-height: 34px;
   font-family: "Montserrat", sans-serif;
 }
-
-.frame {
+footer .split figure {
+  flex: 1 1 650px;
+  align-self: center;
+  order: 1;
+}
+footer .split figure .frame {
   overflow: hidden;
   display: table;
   width: 100%;
   margin: auto;
   flex: 0 1 50%;
 }
-.frame iframe {
+footer .split figure .frame iframe {
   height: 615px;
   display: block;
   margin: auto;
@@ -1454,16 +1295,16 @@ footer figure {
 .copy a {
   color: #7AC8CF;
 }
+.copy a:hover {
+  color: #7AC8CF;
+  text-decoration: underline;
+}
 .copy p {
   margin: 20px auto;
   max-width: 1090px;
   letter-spacing: normal;
 }
-.copy a:hover {
-  color: #7AC8CF;
-  text-decoration: underline;
-}
-.copy span {
+.copy span:not(:first-of-type) {
   margin: 0 2px;
 }
 
@@ -1537,6 +1378,7 @@ footer figure {
   color: #fff;
 }
 
+/* -- MEDIA QUERIES -- */
 @media (max-width: 1340px) {
   #hero figure {
     margin: auto;

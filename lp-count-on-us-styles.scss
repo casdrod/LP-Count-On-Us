@@ -46,6 +46,8 @@ h2{color:$text;text-align:left; font:600 55px/1.1 $font2; letter-spacing: -0.02e
 h3{font-size:32px;line-height:1.41}
 .h3 {color: $text; font: 500 22px/1 $font; letter-spacing: -0.02em; }
 .h4 {letter-spacing:.05em; color: $primary; font: 700 16px/1.1 $font; text-transform: uppercase; margin: 10px auto; }
+
+
 /* header */
 header{position:relative;padding:0;z-index:100;background-color: #fff;
     address{padding:0 8px;}
@@ -149,9 +151,10 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
                 font-size: 34px;}
         }
     }
-    figure {position: relative;}
-    figure figcaption {position: absolute; right: 0;  width: 100%;font-weight: 700;letter-spacing: 1.4px;font-size: 18px; text-align: center; padding: 5px 10px; text-transform: uppercase; border-radius: 4px; background-color: rgba(255,255,255,.9); bottom: 0; 
-        a {color: $text; font-size: 11px; font-weight: 700; font-family: $font2; letter-spacing: 0.15em;}
+    figure {position: relative;
+        figcaption {position: absolute; right: 0;  width: 100%;font-weight: 700;letter-spacing: 1.4px;font-size: 18px; text-align: center; padding: 5px 10px; text-transform: uppercase; border-radius: 4px; background-color: rgba(255,255,255,.9); bottom: 0; 
+            a {color: $text; font-size: 11px; font-weight: 700; font-family: $font2; letter-spacing: 0.15em;}
+        }
     }
     &.alt {
         figure {order: -1;}
@@ -274,78 +277,40 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
   .contain {padding: 30px 20px;}
     .flex-ed {max-width: 1320px; margin: 20px auto 40px; justify-content: space-around; flex-wrap: nowrap;}
 }
-.offer {display: block; margin: 20px 10px; position: relative; text-align: center; filter: drop-shadow(0px 3px 6px rgba(33, 33, 33, 0.15));
-  flex:0 350px; padding: 0; display: flex; flex-direction: row; 
-    article {align-self: center;     margin: 0 0 0 auto; padding: 50px 20px;  position: relative; z-index: 3;}
-    >span{align-self: flex-end; order: -1; position: absolute; left: 0; right: 0; top: 0;}
-    .h1 {color: #973e32; font: 600 60px/1.1 $font2; letter-spacing: normal; text-transform: uppercase;
-        sup { small {display: inline-block; font-size: 16px;     line-height: 1; letter-spacing: 0.4px; text-transform: none; text-align: left;}}
-     }
-    p {font-size: 15px; font-weight: 400; margin: 0 auto 15px; line-height: 1.1; letter-spacing: 0.03em;}
-     img {margin: auto auto 0;}
-     &:last-of-type, &:nth-of-type(3) {
-         article {margin: 0  auto 0 0;}
-         > span{    margin: 0 auto 0 0;}
-     }
-     .h2 {font: 700 60px/1.1 $font; color: $primary;
-        letter-spacing: -0.02em; margin-bottom: 0;
-    }
-    .h4 {color: $secondary;}
-        .asterisk {color: $text; font-weight: 400; font-size: 20px; top: -1.4em; padding-left: 5px;}
-     &:last-of-type article {margin-bottom: 10px;}
-     &:nth-of-type(2) article {padding-top: 10px;}
-     &:nth-of-type(2) article .h3 {font-size: 27px;}
-     .offer-note {font-size: 7px; letter-spacing: -0.17px; line-height: 1.14; padding-left: 40px; margin-top: 55px;}
-}
 
 
-#reviews{background-color: $tertiary; padding:80px 30px; margin-top: 60px;}
-#review-container{position:relative;border-radius: 8px; background: $secondary; box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.16);box-shadow:1.6px 2.5px 7px rgba(7,8,8,0.15);max-width:1120px;color:#fff;align-items:center;padding:0;margin:auto;flex-wrap:nowrap; 
-    #review-count {position: absolute;top: -50px;left: -50px;}
-}
-
-#about {
-    h2 {font-size: 40px;;}
-}
-
-.over {width: 100px; height: 100px; border-radius: 50%; color: #fff; font: 700 18px/.9 $font; text-transform: uppercase;
-    box-shadow: 2px 3px 13px rgba(3, 47, 42, 0.2); 
-    background-color: $primary; text-align: center; padding: 15px 10px 10px; height: 80px; width: 80px; display: flex;
-    flex-direction: column; justify-content: center; align-items: center; position: absolute; top: -20px; left: -50px;
-    span {display: block; font-size: 28px; }
-    small {display: block; font-size: 12px; letter-spacing: -.4px; margin-bottom: 5px;}
-}
-#google{background-color:#fff;flex:0 1 225px;align-self:stretch;text-align:center;display:flex;flex-direction:column;justify-content:center; border-radius: 8px 0 0 8px;
-    img{padding:15px 0}
-     > div{margin-top:25px;padding:5px 25px}
-     p{color:#fff;font-size:20px;line-height:1.25;display:block;margin-top:15px;font-size:15px;text-transform: uppercase; color: $text; font-weight: 600; font-family: $font; letter-spacing: 1.5px; }
-}
-
-.comment{flex:1 1 900px;padding:30px 50px 40px;text-align:left;margin:auto;
-    p{font:400 30px/40px $font;margin-top:30px;margin-bottom:10px;color:#fff;}
-    .caption2{float:right;font:600 normal 16px/1 $font; letter-spacing: 0.15em; text-transform:uppercase;margin:5px 0 0}
-}
-
-.insurance{text-align:left;padding:0;position:relative;overflow:hidden;
+#insurance{text-align:left;padding:0;position:relative;overflow:hidden;
     .container{max-width:1140px;margin:auto;padding:20px;text-align:center;
-        #insurance-list {display: flex;flex-wrap: wrap;
+        h2{display:flex;font-size: 43px;align-items:center;position:relative;text-align:center;z-index:2;padding:10px 20px 15px;margin:10px auto -15px;justify-content:center;
+            &:before, &:after{content:'';height:2px;background-color:#204369;flex:1}
+            &:before{margin-right:20px}
+            &:after{margin-left:20px}
+        }
+        p{line-height:32px;max-width:1100px;margin:10px auto; padding: 10px;}
+        #insurance-list {display: flex;flex-wrap: wrap;justify-content: space-evenly;
             span {display: flex;margin: 10px auto;align-items: center;}
         }
         small {opacity: 0.4;}
-        .btn {font-size: 20px; border-radius: 0;}
+        #disclaimer {color:rgba(37, 38, 39,0.4);font:400 16px/1 $font;margin-top:20px;text-align:center}
     }
-    h2{display:flex;font-size: 43px;align-items:center;position:relative;text-align:center;z-index:2;padding:10px 20px 15px;margin:10px auto -15px;justify-content:center;
-        &:before, &:after{content:'';height:2px;background-color:#204369;flex:1}
-        &:before{margin-right:20px}
-        &:after{margin-left:20px}
+}
+
+#reviews{background-color: $tertiary; padding:80px 30px; margin-top: 60px;
+    #review-container{position:relative;border-radius: 8px; background: $secondary; box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.16);box-shadow:1.6px 2.5px 7px rgba(7,8,8,0.15);max-width:1120px;color:#fff;align-items:center;padding:0;margin:auto;flex-wrap:nowrap; 
+        #google{background-color:#fff;flex:0 1 225px;align-self:stretch;text-align:center;display:flex;flex-direction:column;justify-content:center; border-radius: 8px 0 0 8px;
+            img{padding:15px 0}
+             > div{margin-top:25px;padding:5px 25px}
+             p{color:#fff;font-size:20px;line-height:1.25;display:block;margin-top:15px;font-size:15px;text-transform: uppercase; color: $text; font-weight: 600; font-family: $font; letter-spacing: 1.5px; }
+        }
+        .comment{flex:1 1 900px;padding:30px 50px 40px;text-align:left;margin:auto;
+            p{font:400 30px/40px $font;margin-top:30px;margin-bottom:10px;color:#fff;}
+            .caption2{float:right;font:600 normal 16px/1 $font; letter-spacing: 0.15em; text-transform:uppercase;margin:5px 0 0}
+        }
     }
-    #insurance-list {display:flex;flex-wrap:wrap;justify-content: space-evenly;}
-    .flex-ed{display:flex;justify-content: center; align-items:center;max-width:1200px;margin:0 auto;
-        span {padding: 10px 8px; flex: 0 1 auto; margin: auto;}
-        &:first-of-type {max-width: 1000px;}
-    }
-    p{line-height:32px;max-width:1100px;margin:10px auto; padding: 10px;}
-    #disclaimer {color:rgba(37, 38, 39,0.4);font:400 16px/1 $font;margin-top:20px;text-align:center}
+}
+
+#about {
+    h2 {font-size: 40px;}
 }
 
 #three-ways {max-width:1140px;margin:auto;padding:20px;text-align:center;
@@ -357,14 +322,6 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 }
 
 footer{overflow:hidden; padding:40px 0 0;
-    .phy {color: #fff; font-size: 20px; display: block; position: relative;padding-left: 40px;
-        &:before {position: absolute; left: 0; top: 8px; font-family: fontello; content: '\e809'; color: $primary;  font-size: 22px;}
-        &:hover {color: $primary;}    
-    }
-    .pho {color: #fff; display: block; position: relative; font: 600 35px/1.1 $font; margin: 35px 0 20px; padding-left: 40px;
-        &:before {position: absolute; left: 0px;top: 3px; font-family: fontello; content: '\e80b'; color: $primary;  font-size: 30px;}
-        &:hover {color: $primary;}
-    }
     .split{justify-content:space-between;max-width:1160px; padding: 0; align-items:flex-start;margin:auto;margin-bottom:70px;
         article{flex: 0 1 500px; background-color: $secondary;padding:85px 60px; margin: 0; align-self: center; border-radius: 8px;
             h2{font:600 70px/1 $font;color:#fff; margin:0 auto 30px;
@@ -372,30 +329,36 @@ footer{overflow:hidden; padding:40px 0 0;
                     &:last-of-type {font-size: 70px!important;color: #fff!important;}
                 }
             }
+            .phy {color: #fff; font-size: 20px; display: block; position: relative;padding-left: 40px;
+                &:before {position: absolute; left: 0; top: 8px; font-family: fontello; content: '\e809'; color: $primary;  font-size: 22px;}
+                &:hover {color: $primary;}    
+            }
+            .pho {color: #fff; display: block; position: relative; font: 600 35px/1.1 $font; margin: 35px 0 20px; padding-left: 40px;
+                &:before {position: absolute; left: 0px;top: 3px; font-family: fontello; content: '\e80b'; color: $primary;  font-size: 30px;}
+                &:hover {color: $primary;}
+            }
+            .hours {display: table; margin: 0; text-align: left!important; position: relative; padding-left: 40px;
+                &:before {position: absolute; left: 0; top: 25px; font-family: fontello; content: '\e839'; color: $primary;  font-size: 30px;};
+                label {width:131px; display: inline-block; font-weight: 600;}
+                p {font-size:20px; color: #fff; line-height: 34px; font-family: $font;}
+            }
         }
-        figure p {text-align: center;}
+        figure {flex:1 1 650px; align-self: center; order: 1;
+            .frame{overflow:hidden;display:table;width:100%;margin:auto; flex: 0 1 50%;
+                iframe{height:615px;display:block;margin:auto;width:100%;}
+            }
+        }
     }
-    figure{flex:1 1 650px; align-self: center; order: 1;}
-}
-
-.hours {display: table; margin: 0; text-align: left!important; position: relative; padding-left: 40px;
-    &:before {position: absolute; left: 0; top: 25px; font-family: fontello; content: '\e839'; color: $primary;  font-size: 30px;}
-    ;}
-.hours label {width:131px; display: inline-block; font-weight: 600;}
-.hours p {font-size:20px; color: #fff; line-height: 34px; font-family: $font;}
-
-.frame{overflow:hidden;display:table;width:100%;margin:auto; flex: 0 1 50%;
-    iframe{height:615px;display:block;margin:auto;width:100%;}
 }
 
 
 .copy {margin-top:20px;padding:40px 10px 20px; background-color:#0D0D0D; margin:auto;text-transform:uppercase; font:600 11px/1.4 $font; color:#fff; letter-spacing: normal;
    a, p {font:600 11px/1.4 $font;letter-spacing: normal;color:#fff; }
-   a {color:$primary; }
+    a {color:$primary;
+        &:hover {color:$primary;text-decoration:underline;}
+    }
     p {margin: 20px auto; max-width: 1090px; letter-spacing: normal;}
-    a:hover{color:$primary;text-decoration:underline}
-    span {margin: 0 2px;}
-
+    span:not(:first-of-type) {margin: 0 2px;}
 }
 
 ::placeholder{color:$text;}
@@ -415,6 +378,10 @@ footer{overflow:hidden; padding:40px 0 0;
         &:hover {color: #fff;}
     }
 }
+
+
+
+/* -- MEDIA QUERIES -- */
 @media (max-width: 1340px) {
     #hero figure {margin: auto;}
 }
