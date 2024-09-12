@@ -2,45 +2,41 @@
 .animated{-webkit-animation-duration:2s;animation-duration:2s;-webkit-animation-fill-mode:both;animation-fill-mode:both}@-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.fadeIn{-webkit-animation-name:fadeIn;animation-name:fadeIn}@-webkit-keyframes slideIn{from{transform:translate3d(0,-100%,0)}to{transform:translate3d(0,0,0)}}@keyframes slideIn{from{transform:translate3d(0,-100%,0)}to{transform:translate3d(0,0,0)}}@-webkit-keyframes fadeInUp{from{opacity:0;transform:translate3d(0,100%,0)}to{opacity:1;transform:none}}@keyframes fadeInUp{from{opacity:0;transform:translate3d(0,100%,0)}to{opacity:1;transform:none}}.fadeInUp{-webkit-animation-name:fadeInUp;animation-name:fadeInUp}@-webkit-keyframes fadeInRight{from{opacity:0;transform:translate3d(100%,0,0)}to{opacity:1;transform:none}}@keyframes fadeInRight{from{opacity:0;transform:translate3d(100%,0,0)}to{opacity:1;transform:none}}.fadeInRight{-webkit-animation-name:fadeInRight;animation-name:fadeInRight}@-webkit-keyframes fadeInLeft{from{opacity:0;transform:translate3d(-100%,0,0)}to{opacity:1;transform:none}}@keyframes fadeInLeft{from{opacity:0;transform:translate3d(-100%,0,0)}to{opacity:1;transform:none}}.fadeInLeft{-webkit-animation-name:fadeInLeft;animation-name:fadeInLeft}
 .star:before{font-size: 28px;font-family:'fontello';font-weight:400;margin:0;font-style:normal;content:'\e80f \e80f \e80f \e80f \e80f';color:#FEBB21; letter-spacing: .3em; }
 
-$primary:  #7AC8CF;
-$secondary: #005280;
-$tertiary: #C5D5DE;
-$font: 'Montserrat', sans-serif;
-$font2: 'Montserrat', sans-serif;
-$text: #0D0D0D;
+$primary:  #B88C1E;
+$secondary: #171B4B;
+$tertiary: #F4F6F3;
+$font: "roboto", sans-serif;
+$font2: "ivypresto-display", serif;
+$text: #000;
 
 
-@media (min-width: 1031px) {
-    #fixed-tabs{display:none}
-}
-@media (max-width: 1030px) {
-    #fixed-tabs{position:fixed;right:0;text-align:center;line-height:1;font-size:0;z-index:10000; bottom:0;width:100%;box-shadow:0 0 15px rgba(0,0,0,0.3); display:flex;
-       a{padding:13px 0;flex: 1; font-size:13px;font-weight:700;font-family: $font;background-color: $secondary;color:#fff;text-transform:uppercase; 
-          span{display:inline-block;vertical-align:middle;
-            &:last-child{margin-left:7px} 
-           } 
-           &:nth-of-type(2){background-color:$primary; }
-        }
-        .ra {flex: 2;}
-       i{font-size:16px; margin-right: 5px;}
-       i, i:before{display:inline-block;margin:0 auto}
-    }
-    footer{margin-bottom:42px!important}
-}
-@media (max-width: 600px) {
-    #fixed-tabs {
-        strong{display:none}
-        a span:last-child{margin-left:0}
-    }
+/* FIXED TABS */
+#fixed-tabs { display:none;position: fixed; right: 0; text-align: center; line-height: 1; font-size: 0; z-index: 1100;}
+#fixed-tabs a { font-size: 12px; background-color: #7d7e82; color: #fff; position: relative; overflow: hidden; transition: width .3s, background-color .3s;}
+#fixed-tabs i { font-size: 16px; }
+#fixed-tabs i, #fixed-tabs i:before { margin: 0 3px 0 0; }
+#fixed-tabs em { font-size: 14px; font-style: normal; margin-top: 4px; font-weight: 400; text-transform: uppercase; }
+#fixed-tabs strong { font-weight: 900; }
+#fixed-tabs .ra, #fixed-tabs .map { background-color: $primary; }
+#fixed-tabs .call {background-color: $secondary;}
+#fixed-tabs .ra {flex: 2;}
+@media (max-width:1000px) {
+  #fixed-tabs { bottom: 0; width: 100%; box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+  #fixed-tabs a { padding: 12px 0; -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+  #fixed-tabs a span { display: flex;justify-content: center;align-items:center;; }
+  #fixed-tabs a span:last-child { margin-left: 7px;display:none; }
+  #fixed-tabs a strong { display: none; }
+  #fixed-tabs .call, #fixed-tabs .map { display: block; }
 }
 
-body{position:relative;background-color: #F6F6F6; font-family: $font; text-align:center; overflow-x: hidden;}
+
+body{position:relative;background-color: #FFF; font-family: $font; text-align:center; overflow-x: hidden;}
 p{font:400 20px/28px $font; color: $text;}
 a{display:inline-block;text-decoration:none;cursor:pointer}
 h1,h2,h3,h4,h5,h6{font-family: $font;}
 .mobile-banner-reviews{display:none}
 h1 {margin:0;text-align:center;color:$text; font:700 70px/1.1 $font; letter-spacing: -0.02em; }
-h2{color:$text;text-align:left; font:600 55px/1.1 $font2; letter-spacing: -0.02em;
+h2{color:$secondary;text-align:left; font:600 55px/1.1 $font2;
     span {display: block; font-size: 24px; font-weight: 400; color: $text; font-family: $font; margin-bottom: 10px;letter-spacing: .3px;}
 }
 h3{font-size:32px;line-height:1.41}
@@ -53,25 +49,19 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
         &:hover{color:$primary}
         i:before {color: $primary;font-size: 22px;margin-left: -10px;margin-right: 15px;}
     }
-	#nav{padding: 20px 10px;display:flex;flex-wrap:wrap;max-width:1350px;justify-content:space-between;margin:auto;align-items:center;
-		.btn{width: 460px;display: flex;flex-wrap: wrap;justify-content: center;margin:0;padding: 15px 25px;font-size:20px;background-color: $primary;max-width: 470px;color: #000;font-family: $font;font-weight: 700;border-radius: 20px;
-			i:before {margin-right: 25px;
-                margin-top: -2px;}
+	#nav{padding: 15px 10px;display:flex;flex-wrap:wrap;max-width:1300px;justify-content:space-between;margin:auto;align-items:center;
+		.btn{padding: 12px 30px; display: flex;flex-wrap: wrap;	justify-content: center;margin:0;font-size:18px;background-color: $primary;max-width: 350px;color: #fff;font-family: $font;font-weight: 600;border-radius: 30px;letter-spacing: 2px;
+			i:before {margin-right: 10px;margin-top: -4px;}
 			span {display: block;width: 100%;font-size: 44px;text-transform: uppercase;font-weight: 600;}
             &:hover {background-color: $secondary; color: #fff;}
 		}
         #header-details {
-            .pho {display:flex;font-size: 41px;align-items:center;font-weight: 700;margin-bottom: 10px;color: $text;
-                i {
-                    &:before {color: $primary;margin-right: 10px;
-                        margin-left: 0;}
+            h2 {color: $primary;font-family: $font;font-size: 18px;font-weight: 800;text-align: center;margin-bottom: 10px;letter-spacing: 1px;text-transform: uppercase;}
+            .header-phone {color: $primary;display:flex;font-size: 40px;align-items:center;font-weight: 700;letter-spacing: 3px;
+                i{
+                    &:before {font-size: 22px;margin-left: -2px;margin-right: 10px;color: $primary;}
                 }
-                &:hover{color:$primary}
-            }
-            a {
-                i {
-                    &:before {font-size: 22px;}
-                }
+                &:hover{color:$secondary}
             }
         }
 		#mobile-btns {
@@ -100,8 +90,8 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 					width: 100%;
 				}
 			  }
-			.phone {background-color: $tertiary;color: #000;font-size: 20px;line-height: 1.3;
-				span {text-transform: uppercase;font-size: 16px;font-weight: 700;letter-spacing: 1px;color: #000;}
+              .phone {padding: 5px;background-color: #C3C3C3;color: #000;font-size: 21px;line-height: 1.3;
+				span {text-transform: uppercase;font-size: 14px;font-weight: 700;letter-spacing: .4px;color: #000;}
 			}
 			#mobile-special {
 				.container {
@@ -121,8 +111,8 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 }
 .address {font-size: 24px;line-height: 1.4; color: $text;}
 .address:hover{color:$primary}
-.fix-nav header{position:fixed;width:100%;left:0;top:0;right:0; animation:slideIn .8s both; box-shadow:1.6px 2.5px 7px rgba(6,7,7,0.35);
-    .logo img {max-height:100px;}
+.fix-nav header{position:fixed;width:100%;left:0;top:0;right:0; animation:slideIn .8s both; box-shadow:1.6px 2.5px 7px rgba(6,7,7,0.35);z-index: 2000;
+    .logo img {max-height:70px;}
 }
 
 .btn,.btn-alt{cursor:pointer;position:relative;display:inline-block;margin:3px auto;padding:10px 25px;color: #fff;font:700 14px/1 $font;transition:border .3s;background-color:$primary; transition:  .3s all; text-transform: uppercase; border-radius: 6px; letter-spacing: 1px;
@@ -132,25 +122,30 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 
 .split{display:flex;justify-content:space-around;flex-wrap:nowrap;align-items:center;justify-content:center; margin: 100px auto 50px; padding: 0 20px; overflow: hidden;
     .flex-ed {max-width: 1100px; margin: 50px auto; position: relative;; display: flex; flex-wrap: nowrap;background-color: #fff;box-shadow: 5px 4px 13px 5px #01010129;
-        &:before, &:after {content: ''; position: absolute; left: -40px; top: -80px; z-index: -1;  background-color: $secondary; opacity: .4; width: 420px; height: 270px;}
+        &:before, &:after {content: ''; position: absolute; left: -40px; top: -80px; z-index: -1;  background-color: #F4F6F3; width: 350px;
+            height: 350px;}
         &:after {left: auto; top: auto; bottom: -80px; right: -40px}
     }
-    article{margin:10px;flex:0 1 600px; text-align: left;  padding: 35px 40px 30px; display: flex;flex-direction: column; justify-content: center;}
-    h2 {margin: 5px auto 25px;font-weight:600;font-size: 55px;
-        span {
-            &:last-of-type {display: block;font-weight: 400;font-size: 24px;}
+    article{margin:10px;flex:0 1 600px; text-align: left;  padding: 35px 40px 30px; display: flex;flex-direction: column; justify-content: center;
+        > div {
+            > span {font-size: 24px;}
+            h2 {margin: 5px auto 25px;font-weight:300;font-size: 50px;
+                span {
+                    &:last-of-type {display: block;font-weight: 400;font-size: 24px;}
+                }
+            }
         }
     }
     &.even figure{order:-1;margin-right:40px}
     ul { text-align: left; list-style-type: none; padding: 0;
-        li {font-size: 24px; position: relative; padding-left: 35px; margin: 20px auto ;
-            &:before {content: '\e840'; font-family: fontello; color: $primary; position: absolute; left: -8px;
-                top: -2px;
-                font-size: 34px;}
+        li {font-size: 28px; position: relative; padding-left: 35px; margin: 20px auto;
+            &:before {content: '+'; font-family: fontello; color: $primary; position: absolute; left: -3px;top: 5px;
+                font-size: 26px;
+                font-weight: 700;}
         }
     }
     figure {position: relative;}
-    figure figcaption {position: absolute; right: 0;  width: 100%;font-weight: 700;letter-spacing: 1.4px;font-size: 18px; text-align: center; padding: 5px 10px; text-transform: uppercase; border-radius: 4px; background-color: rgba(255,255,255,.9); bottom: 0; 
+    figure figcaption {position: absolute; right: 0;  width: 300px; text-align: center; padding: 5px 10px; text-transform: uppercase; border-radius: 4px; background-color: rgba(255,255,255,.9); bottom: 0; 
         a {color: $text; font-size: 11px; font-weight: 700; font-family: $font2; letter-spacing: 0.15em;}
     }
     &.alt {
@@ -162,18 +157,17 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
     h2 {text-align: center;}
 }
 
-.safe-bar{width:100%;position:relative; background-color: $secondary; z-index:10;color:#fff;font:400 24px/1.2 $font; padding:8px 10px;text-align:center;letter-spacing: 0.47px;transition:  .3s all;
+.safe-bar{text-transform:uppercase;width:100%;position:relative;background-color: $secondary; z-index:10;color:#fff;font:400 20px/1.2 $font; padding:8px 10px;text-align:center;letter-spacing: 2px;transition:  .3s all;
     span {margin: 0 20px;}
 }
 #hero {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    border-bottom: 8px solid $primary;
     > * {
       flex: 1 0 500px;
     }
-    .flex-ed {background-color: #fff;
+    .flex-ed {background-color: $tertiary;
         figure {
             margin: 0;
             position: relative;
@@ -190,8 +184,8 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
               font-size: 18px;
               width: 100%;
               font-weight: bold;
-              letter-spacing: 1.3px;
-              background-color: rgb(255, 255, 255);
+              letter-spacing: 3px;
+              background-color: rgba(255, 255, 255, 0.9);
               padding: 10px;
               text-transform:uppercase;
               color: $text;
@@ -199,39 +193,38 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
               text-transform: uppercase;
               left: 50%;
               transform: translateX(-50%);
-              a {color: $text;letter-spacing: 1.6px;
+              a {color: $text;font-weight: 300;letter-spacing: 3px;
+
                   &:hover {color: $primary}
               }
             }
           }
           article {
-            order: 2;
             position: relative;
             z-index: 2;
-            padding: 35px 10px;
+            padding: 10px;
             display: flex;
             margin: auto;
-            flex: 0 1 600px;
+            flex: 0 1 650px;
             flex-flow: column wrap;
             justify-content: center;
             align-items: center;
             gap: 25px;
+            #hero-accent-img {margin-bottom: -15px;}
             * {
-              color: #000;
+              color: #fff;
             }
             small {opacity: 0.4;font-size: 16px;text-transform: uppercase;font-weight: 700;letter-spacing: 1.8px;}
             h1 {
-              font-size: 23px;
-              font-weight: 600;
-              letter-spacing: normal;
+              font-size: 25px;
+              font-weight: 400;
+              letter-spacing: 3px;text-transform: uppercase;
               line-height: 1;
-              text-align: center;
-              text-transform:uppercase;
+              text-align: center;color: $secondary;
               span {
-                display: block;
-                font-weight: 600;
-                text-transform:none;
-                font-size: 73px;
+                display: block;color: $secondary;
+                font-weight: 200;
+                font-size: 83px;text-transform: none;letter-spacing:normal;
                 line-height: 1;
                 font-family: $font2;
               }
@@ -250,28 +243,58 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
     }
   }
 
-.count {
-   background: $secondary; display: flex; max-width: 1120px; margin: 75px auto 50px; border-radius: 8px; box-shadow:1px 1px 12px 5px rgba(0, 0, 0, 0.2);
-   .h2 {flex-wrap: wrap;text-align: center; color: #fff; text-transform:uppercase;font: 600 59px/63px $font2; align-self: center; padding: 40px;
-        span {display:block;font-style: italic;}
-    }
-   article {background: #fff; flex: 1;border-radius: 0 8px 8px 0;}
-   ul {font-size: 34px; list-style-type: none; text-align: left; line-height: 1.2; margin: 10px auto 10px 30px; padding: 40px 20px; display: table;
-        li {position: relative; padding: 10px 0 10px 40px;
-            &:before {content: '\e840';font-family: fontello;color: $primary;position: absolute;left: -10px;top: 4px;
-                font-size: 40px;}
+
+//   .box {
+//     position: relative;
+//     }
+//     .box:after, .box:before {
+//      content: '';
+//      position: absolute;
+//      inset: -9px;
+//     }
+//     .box:after {
+//      border-top: 7px solid $secondary;
+//      border-bottom: 7px solid $secondary;
+//      border-left: 1px solid $secondary;
+//      border-right: 1px solid $secondary;
+//     }
+//     .box:before {
+//      border-left: 5px solid;
+//      border-right: 5px solid;
+//      border-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 20%, rgba(255,255,255,0) 20%,rgba(255,255,255,0) 80%, rgba(0,0,0,1) 80%, rgba(0,0,0,1) 100%);
+//     }
+
+
+.count {background: #fff; max-width: 963px; height: 324px;align-content: center;padding: 15px 0 20px;margin: 75px auto 50px; box-shadow:1px 1px 12px 5px rgba(0, 0, 0, 0.2);position: relative;
+    &:before {content: url(assets/images/extra-border.png);position: absolute;left: -9px;z-index: -2;
+        top: -11px;}
+    #count-accent-img {margin: 5px auto 10px;}
+    > div:last-child {display: flex; 
+        &:before, &:after {content: '';position: absolute;background-color: #ECE9E7;height: 350px;width: 350px;z-index: -10;}
+        &:before {left: -60px;top: -60px;}
+        &:after {right: -60px;bottom: -60px;}
+        .h2 {flex-wrap: wrap;text-align: center; color: $secondary; font: 200 90px/90px $font2; align-self: flex-start;
+            padding: 30px 40px 40px;
+                span {display:block;font-style: italic;}
+            }
+        article {background: #fff; flex: 1;border-radius: 0 8px 8px 0;align-content: center;}
+        ul {font-size: 29px; list-style-type: none; text-align: left; line-height: 1.2; margin: 10px auto 10px 40px; padding: 0; display: table;
+                li {position: relative; padding-bottom: 20px;
+                    &:before {font-weight: 700;content: '+';font-family: fontello;color: $primary;position: absolute;left: -40px;top: 4px;
+                        font-size: 24px;}
+                }
         }
- }
+    }
 }
 
-#first {margin-top: 20px;}
+#first {margin-top: 40px;}
 
-#banner{overflow:hidden;
+#banner{overflow:hidden;border-top: 8px solid $primary;
     h2{display:flex;align-items:center;position:relative;text-align:center;z-index:2;padding:10px 20px 25px;margin:10px auto -15px; max-width:1160px; justify-content:center; color: $secondary; font-size: 45px; font-weight: 500;}
     h2:before, h2:after{content:'';height:2px;background-color:$secondary;flex:1; margin-top: 5px;}
     h2:before{margin-right:20px}
     h2:after{margin-left:20px}
-  .contain {padding: 30px 20px;}
+  .contain {padding: 50px 20px 30px;}
     .flex-ed {max-width: 1320px; margin: 20px auto 40px; justify-content: space-around; flex-wrap: nowrap;}
 }
 .offer {display: block; margin: 20px 10px; position: relative; text-align: center; filter: drop-shadow(0px 3px 6px rgba(33, 33, 33, 0.15));
@@ -299,15 +322,10 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 }
 
 
-#reviews{background-color: $tertiary; padding:80px 30px; margin-top: 60px;}
-#review-container{position:relative;border-radius: 8px; background: $secondary; box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.16);box-shadow:1.6px 2.5px 7px rgba(7,8,8,0.15);max-width:1120px;color:#fff;align-items:center;padding:0;margin:auto;flex-wrap:nowrap; 
-    #review-count {position: absolute;top: -50px;left: -50px;}
+#reviews{background: url(assets/images/lp-count-review-bkg.jpg);background-repeat: no-repeat;background-size: cover; padding:80px 30px; margin-top: 60px;}
+#review-container{height: 418px; position:relative; box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.16);box-shadow:1.6px 2.5px 7px rgba(7,8,8,0.15);max-width:1130px;color:#fff;z-index: 100;align-items:center;padding:0;margin:auto;flex-wrap:nowrap;
+    &:before {content: url(assets/images/extra-border-reviews.png);position: absolute;left: -9px;z-index: -1;top: -11px;}
 }
-
-#about {
-    h2 {font-size: 40px;;}
-}
-
 .over {width: 100px; height: 100px; border-radius: 50%; color: #fff; font: 700 18px/.9 $font; text-transform: uppercase;
     box-shadow: 2px 3px 13px rgba(3, 47, 42, 0.2); 
     background-color: $primary; text-align: center; padding: 15px 10px 10px; height: 80px; width: 80px; display: flex;
@@ -316,66 +334,68 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
     small {display: block; font-size: 12px; letter-spacing: -.4px; margin-bottom: 5px;}
 }
 #google{background-color:#fff;flex:0 1 225px;align-self:stretch;text-align:center;display:flex;flex-direction:column;justify-content:center; border-radius: 8px 0 0 8px;
-    img{padding:15px 0}
+    img{padding:10px 0 15px}
      > div{margin-top:25px;padding:5px 25px}
      p{color:#fff;font-size:20px;line-height:1.25;display:block;margin-top:15px;font-size:15px;text-transform: uppercase; color: $text; font-weight: 600; font-family: $font; letter-spacing: 1.5px; }
 }
 
-.comment{flex:1 1 900px;padding:30px 50px 40px;text-align:left;margin:auto;
-    p{font:400 30px/40px $font;margin-top:30px;margin-bottom:10px;color:#fff;}
+.comment{flex:1 1 900px;padding:30px 50px 57px;text-align:left;margin:auto;background: #fff;border-radius: 0 8px 8px 0;
+    p{font:400 36px/41px $font;margin-top:30px;margin-bottom:10px;color:$text; letter-spacing: 0.05em;line-height: 45px;}
     .caption2{float:right;font:600 normal 16px/1 $font; letter-spacing: 0.15em; text-transform:uppercase;margin:5px 0 0}
 }
 
 .insurance{text-align:left;padding:0;position:relative;overflow:hidden;
     .container{max-width:1140px;margin:auto;padding:20px;text-align:center;
-        #insurance-list {display: flex;flex-wrap: wrap;
-            span {display: flex;margin: 10px auto;align-items: center;}
+        h2{display:flex;font-weight: 300;font-size: 50px;align-items:center;position:relative;text-align:center;z-index:2;padding:10px 20px 15px;margin:10px auto -15px;justify-content:center;
+            &:before, &:after{content:'';height:2px;background-color:#204369;flex:1}
+            &:before{margin-right:70px}
+            &:after{margin-left:70px}
         }
-        small {opacity: 0.4;}
-        .btn {font-size: 20px; border-radius: 0;}
-    }
-    h2{display:flex;font-size: 43px;align-items:center;position:relative;text-align:center;z-index:2;padding:10px 20px 15px;margin:10px auto -15px;justify-content:center;
-        &:before, &:after{content:'';height:2px;background-color:#204369;flex:1}
-        &:before{margin-right:20px}
-        &:after{margin-left:20px}
-    }
-    #insurance-list {display:flex;flex-wrap:wrap;justify-content: space-evenly;}
-    .flex-ed{display:flex;justify-content: center; align-items:center;max-width:1200px;margin:0 auto;
-        span {padding: 10px 8px; flex: 0 1 auto; margin: auto;}
-        &:first-of-type {max-width: 1000px;}
-    }
-    p{line-height:32px;max-width:1100px;margin:10px auto; padding: 10px;}
-    #disclaimer {color:rgba(37, 38, 39,0.4);font:400 16px/1 $font;margin-top:20px;text-align:center}
-}
-
-#three-ways {max-width:1140px;margin:auto;padding:20px;text-align:center;
-    h2{display:flex;font-weight: 300;font-size: 43px;align-items:center;position:relative;text-align:center;z-index:2;padding:10px 20px 15px;margin:10px auto -15px;justify-content:center;
-        &:before, &:after{content:'';height:2px;background-color:#204369;flex:1}
-        &:before{margin-right:20px}
-        &:after{margin-left:20px}
+        p {line-height: 1.6;}
+        #insurance-list {display: flex;flex-wrap: wrap;align-items: center;margin: 30px auto;
+            img {max-width: 210px;}
+            span {display: flex;margin: 10px auto;align-items: center;
+                &:last-of-type {font-size: 30px;}
+            }
+        }
+        #disclaimer {color:rgba(37, 38, 39,0.4);font:400 16px/1 $font;text-align:center}
     }
 }
 
-footer{overflow:hidden; padding:40px 0 0;
-    .phy {color: #fff; font-size: 20px; display: block; position: relative;padding-left: 40px;
-        &:before {position: absolute; left: 0; top: 8px; font-family: fontello; content: '\e809'; color: $primary;  font-size: 22px;}
-        &:hover {color: $primary;}    
-    }
-    .pho {color: #fff; display: block; position: relative; font: 600 35px/1.1 $font; margin: 35px 0 20px; padding-left: 40px;
-        &:before {position: absolute; left: 0px;top: 3px; font-family: fontello; content: '\e80b'; color: $primary;  font-size: 30px;}
-        &:hover {color: $primary;}
-    }
-    .split{justify-content:space-between;max-width:1160px; padding: 0; align-items:flex-start;margin:auto;margin-bottom:70px;
+
+
+footer{overflow:hidden; padding:100px 0 0;background: url(assets/images/lp-count-footer-bkg.jpg);background-size: cover;background-repeat: no-repeat;
+    .split{justify-content:space-between; padding: 0; align-items:center;margin:auto;margin-bottom:70px;max-width: 1500px;
         article{flex: 0 1 500px; background-color: $secondary;padding:85px 60px; margin: 0; align-self: center; border-radius: 8px;
-            h2{font:600 70px/1 $font;color:#fff; margin:0 auto 30px;
+            h2{font:300 80px/1 $font;color:#fff; margin:0 auto 30px;
                 span {
                     &:last-of-type {font-size: 70px!important;color: #fff!important;}
                 }
             }
         }
         figure p {text-align: center;}
+        #contact, #hours {
+                h2 {text-transform: uppercase;font-size: 20px;color: #fff;font-family: $font;letter-spacing: 2px;}
+                .address {width: 100%;
+                    text-align: left;
+                    color: #fff;
+                    font-size: 20px;
+                    &:hover {color: $primary;}
+                }
+                .phone {width: 100%;text-align:left;font-weight: 700;
+                    &:hover {color: #fff;}
+                }
+        }
+        #hours {
+            > div {
+                span {display:flex; width: 100%;color: #fff;font-size: 20px;
+                    label {width: 100%;display:block;text-align:left;}
+                    > span {display:block;text-align:right;}
+                }
+            }
+        }
     }
-    figure{flex:1 1 650px; align-self: center; order: 1;}
+    figure{flex:1 1 650px; align-self: center;}
 }
 
 .hours {display: table; margin: 0; text-align: left!important; position: relative; padding-left: 40px;
@@ -385,15 +405,16 @@ footer{overflow:hidden; padding:40px 0 0;
 .hours p {font-size:20px; color: #fff; line-height: 34px; font-family: $font;}
 
 .frame{overflow:hidden;display:table;width:100%;margin:auto; flex: 0 1 50%;
-    iframe{height:615px;display:block;margin:auto;width:100%;}
+    iframe{display:block;margin:auto;width:100%;max-width: 420px;}
 }
 
 
-.copy {margin-top:20px;padding:40px 10px 20px; background-color:#0D0D0D; margin:auto;text-transform:uppercase; font:600 11px/1.4 $font; color:#fff; letter-spacing: normal;
-   a, p {font:600 11px/1.4 $font;letter-spacing: normal;color:#fff; }
-   a {color:$primary; }
-    p {margin: 20px auto; max-width: 1090px; letter-spacing: normal;}
-    a:hover{color:$primary;text-decoration:underline}
+.copy {margin-top:20px;padding:40px 10px 20px; margin:auto;text-transform:uppercase; font:400 16px/1.4 $font; color:#fff; letter-spacing: 1.5px;
+   a, p {font:400 16px/1.4 $font; color:#fff; letter-spacing: normal;}
+    p {margin: 20px auto; max-width: 1300px; letter-spacing: 1.5px;}
+    a {color: $primary;
+        &:hover{color:#fff;}
+    }
     span {margin: 0 2px;}
 
 }
@@ -406,14 +427,12 @@ footer{overflow:hidden; padding:40px 0 0;
     > p{max-width:700px;margin:auto;margin-bottom:30px}
     .simple{margin:40px auto 20px;max-width:550px;padding-right:3px}
     label{display:none}
-    input, textarea, select{width:93%;display:table;margin:10px auto;background-color:#d3d3d3;color:$text;border-radius:5px;padding:15px;font-size:16px; border:none;box-shadow:inset 0 1px 3px 0 rgba(0,0,0,0.5);
-        &:focus{background-color:#e3e3e3}
+    input, textarea, select{width:93%;display:table;margin:10px auto;background-color:#fff;color:$text;border-radius:5px;padding:15px;font-size:16px; border:1px solid;
+        &::placeholder {color: #000;}
     }
     textarea{height:200px;margin-bottom:30px}
     textarea:focus, input:focus, button:focus, select:focus{outline-style:solid;outline-width:thin;outline-color:$secondary}
-    .submitBtn{text-align:center;width:200px;margin:auto;display:table;font-size: 20px;color: #000;
-        &:hover {color: #fff;}
-    }
+    .submitBtn{text-align:center;width:200px;margin:auto;display:table}
 }
 @media (max-width: 1340px) {
     #hero figure {margin: auto;}
@@ -430,6 +449,11 @@ footer{overflow:hidden; padding:40px 0 0;
     .offer:nth-of-type(2) article {padding-bottom: 0;}
     #banner .flex-ed .offer:last-of-type {margin-top: 20px;}
     #hero {background-size: cover;}
+    footer {
+        .split {max-width: 800px;justify-content: center;flex-wrap:wrap;
+            > div {margin: 50px auto;}
+        }
+    }
 }
 @media (max-width: 1180px) {
     #header-details {display:none;}
@@ -440,8 +464,8 @@ footer{overflow:hidden; padding:40px 0 0;
     .over { top: -60px; left: 5px; }
     h1 {font-size: 60px;}
     #hero article img {margin: 10px auto;}
-    .split article {padding: 20px 10px;} 
-    .split h2 {font-size: 46px;}
+    .split article {padding: 20px;} 
+    .split h2 {font-size: 44px;}
 }
 @media (max-width: 1024px) {
     header {
@@ -451,19 +475,23 @@ footer{overflow:hidden; padding:40px 0 0;
             .btn {margin: 20px auto 0;}
         }
     }
-    #hero { background-image:none; 
-        h1 { margin-top: 20px;text-transform: uppercase;font-size: 18px!important;
-            span {text-transform:none;font-size: 46px!important;}
-        }
-        article {padding: 20px 20px; flex: 1; background-color: #fff;
-            div {margin: 0 auto;}
-        }
-        figure {background-color: #303539; flex: 100%;
-            img {display: block; width: 100%}
-        }
-        .caption {
-            display: flex;
-            justify-content: center;
+    #hero { background-image:none;
+        .flex-ed {background-color: #fff;
+            article {padding: 40px 20px; flex: 1;order: -1;
+                h1 {
+                    span {font-size: 80px;}
+                }
+                div {margin: 0 auto;}
+            }
+            figure {background-color: #303539; flex: 100%;
+                img {display: block; width: 100%}
+                .caption {
+                    display: flex;
+                    justify-content: center;
+                    font-size: 18px;
+                    span {display:none;}
+                }
+            }
         }
     }
     .split {
@@ -485,29 +513,38 @@ footer{overflow:hidden; padding:40px 0 0;
     }
     .safe-bar {font-size: 19px; padding: 7px 10px;}
     #banner .flex-ed {flex-wrap: wrap; max-width: 800px;}
+    #banner .contain {padding-bottom: 0;}
     .phone{font-size:24px; }
-    #hero {
-        .flex-ed {
-            article {order: -1;}
-            figure {.caption {display:none;}}
-        }
-    }
     .insurance h2 {
         &:before {content: none;}
         &:after {content: none;}
     }
-
-    .count {display: block;background-color: $secondary;padding: 20px 0;margin: 50px 20px 0; border-radius: 20px;
-        .h2 {padding: 20px 10px; font-size: 50px;
-            span {display:inline;}
-        }
-        article {border-radius: 0 0 8px 8px; padding: 0 20px 20px;background-color: $secondary;
-            ul {padding: 0 0 0 10px;margin-left: 5px;
-                li {color: #fff;
+    .count {display: block;height: auto;box-shadow: none;background: transparent;padding: 20px 0;margin: 0; border-radius: 20px;
+        // &:before {content: url(assets/images/extra-border-mobile.png);left:0;}
+        &:before {content: none;}
+        > div {flex-wrap: wrap;max-width: 500px; margin: auto;
+            &:last-child {display:block;
+                article {background: transparent;}
+                &:before, &:after {content: none;}
+                .h2 {padding: 20px; font-size: 60px;line-height: 60px;padding: 10px;
+                    margin: auto;
+                    span {display:inline;}
                 }
+                ul {padding: 5px;margin-left: 32px;font-size: 24px;}
+            }
+
+        }
+        article {border-radius: 0 0 8px 8px; padding: 0 20px;background-color: $secondary;
+            ul {padding: 0 0 0 10px;margin-left: 5px;
             }
         }
     }
+    .insurance .container h2:before {display: none;}
+    .insurance .container #insurance-list {display:block;
+        img {margin: 30px auto;}
+        span:last-of-type {display:block;}
+    }
+    .split article > div > span {width: 100%;display:block;text-align:center;}
     #first {box-shadow: 3px 0px 10px lightgray;
         margin: 30px;
         border-radius: 20px;padding: 0;
@@ -523,17 +560,18 @@ footer{overflow:hidden; padding:40px 0 0;
         ul {display: table; margin:  auto;}
     }
     #reviews{
-        padding:60px 30px; margin-top: 30px;background-color: $secondary;
-        #review-container {
-            flex-wrap:wrap; border-radius: 20px;background-color:#fff;
-            .comment {border-radius: 0 0 20px 20px;padding: 0 20px 60px;
-                p {text-align:center;color: $text;font-size: 24px;line-height: 30px;}
+        padding:60px 30px; margin-top: 30px;
+        #review-container {height:auto;flex-wrap:wrap;border-radius:20px;max-width: 300px;
+            &:before {content: url(assets/images/reviews-extra-border-mobile.png);left: -27px;}
+            flex-wrap:wrap; border-radius: 20px;
+            .comment {padding:0 20px 60px;border-radius: 0;left: -27px;
+                p {text-align:center;font-size: 22px;line-height: 30px;}
                 .caption2 {font-size: 18px;width: 100%;
                     margin-top: 10px;}
             }
-            #google {flex:0 1 100%; border-radius: 20px 20px 0 0;background:none;
+            #google {flex:0 1 100%; border-radius: 20px 20px 0 0;
                 .star {margin: 10px auto 20px;}
-                p {margin: 0 auto;color: $text;}
+                p {margin: 0 auto;}
                 p img{margin:0 auto;}
                  > div{margin-top:40px}
             }
@@ -541,7 +579,7 @@ footer{overflow:hidden; padding:40px 0 0;
     }
     .insurance {
         .container {
-            h2 {display: flex; flex-wrap: wrap;position:relative;padding-bottom: 30px;
+            h2 {display: flex; flex-wrap: wrap;position:relative;padding-bottom: 30px;font-size: 48px;
                 span {font-size: 40px;}
                 &:after {content: ""; width: 150px; height: 2px; color: $secondary;position: absolute;bottom: 10px;margin: auto;}
             }
@@ -550,7 +588,7 @@ footer{overflow:hidden; padding:40px 0 0;
 
     #about {
         box-shadow: 3px 0px 10px lightgray;
-        margin: 30px;
+        margin: 50px 30px 30px;
         border-radius: 20px;padding: 0;
         .flex-ed {margin: 0;padding-top: 0;
             article {margin: 0;}
@@ -560,20 +598,23 @@ footer{overflow:hidden; padding:40px 0 0;
     .over {top: -30px;}
     
     footer {padding: 0;
-        .split {margin: 30px; border-radius: 20px;}
+        .split {margin: 30px; border-radius: 20px;
+            figure {margin: 80px auto;}
+            > div {
+                > div {margin: 30px auto;
+                    h2 {padding: 0;}
+                }
+            }
+            #hours {
+                > div {span {
+                    label {width: 100px;}
+                }}
+            }
+        }
         .split article {padding: 50px 10px 10px; border-radius: 0;}
         .split p {text-align: left;}
-        .phy, .pho, .hours {display: table; margin: 20px auto;}
-        .pho {margin: 10px 10px 10px 20px;padding-left: 25px;
-            &:before {left: -12px;}
-        }
-        .phy {padding-left: 10px;
-            &:before {left: -22px;}
-        }
+        .phone {font-size: 32px;}
     }
-.hours {padding-left: 0;}
-.hours:before {left: -37px;
-    top: 8px;}
     .hours p {font-size: 18px;}
     .split {
         .flex-ed {
@@ -604,14 +645,6 @@ footer{overflow:hidden; padding:40px 0 0;
         img, p{display:inline-block;vertical-align:middle}
         p{padding:0 50px; font-weight: 700;}
     }
-    #banner {
-        .contain{padding: 30px 10px;}
-    }
-    .count {
-        .h2 {
-            br {display: none;}
-        }
-    }
     #hero {
         h1 {
             span {font-size: 50px;}
@@ -619,6 +652,7 @@ footer{overflow:hidden; padding:40px 0 0;
         .flex-ed {
             img {flex: 100%;}
             article img {max-width: 250px;}
+            figure {caption {display:none;}}
         }
         .caption {left:50%; transform: translateX(-50%);}
     }
@@ -638,14 +672,19 @@ footer{overflow:hidden; padding:40px 0 0;
     .insurance .flex-ed {justify-content: center;}
 
 }
+@media (min-width: 1000px) and (max-width: 1190px) {
+    .comment p {font-size: 30px;}
+    .comment {height: 100%;}
+}
 @media (max-width: 700px) {
-    #banner .contain {padding-top: 20px;}
+    #banner .contain {padding-top: 50px;}
     #google > div{margin-top:20px}
     #google p{margin-bottom:0}
     .comment .caption2{margin-top:0}
     #lp-appointment-form h1{font-size:36px}
     #banner .flex-ed {margin-bottom: 80px;}
     .insurance{padding:0}
+    footer .split h2 {text-align: left;}
 }
 
 @media (max-width: 590px) {
@@ -672,9 +711,10 @@ footer{overflow:hidden; padding:40px 0 0;
         figure{margin-top:-10px}
     }
     .frame{display:none;}
-    .copy{padding:30px 10px 20px}
-    .hours label {width: 100px;}
+    .copy{padding:30px 10px 40px}
+    .hours label {width: 110px;}
     #hero .caption {line-height: .7; position: static; padding: 10px;transform: none; max-width: 100%;}
+
 }
 @media (max-width: 480px) {
     h2, footer h2{font-size:36px}
@@ -682,14 +722,33 @@ footer{overflow:hidden; padding:40px 0 0;
     .btn-alt span {font-size: 24px;}
     .over {top: -50px}
     .offer {padding: 0;}
-    .count .h2 {font-size: 10vw;}
+    .count .h2 {font-size: 12vw;}
     .count ul {padding: 0;}
-    
+    .count {max-width: 350px;margin: auto;height: 612px;
+        &:before {content:url(assets/images/extra-border-mobile.png);right: 0;left: 0;}
+    }    
 }
 @media (max-width: 400px) {
+    .count {
+        &:before {background-image: url(assets/images/extra-border-mobile.png);
+            content: "";
+            width: 335px;
+            display: inline-block;
+            position: absolute;
+    left: 0;
+    right: 0;
+            height: 640px;
+            background-size: 335px 640px;}
+        .h2 {width: 100%;}
+        ul {margin: 20px auto;
+            li {
+                &:before {left: -30px!important;}
+            }
+        }
+    }
     header .btn-alt{font-size:14px}
     .mobile-banner-reviews p{padding:0 30px; font-size:16px}
-    .safe-bar{font-size:15px}
+    .safe-bar{font-size:18px}
     .offer > span {flex: 0 1 50%;}
     #hero {
         .caption {padding: 10px 5px; bottom: 30px;
@@ -700,39 +759,23 @@ footer{overflow:hidden; padding:40px 0 0;
     }
     #hero .caption a {display: block;}
     .caption a {font-size: 14px;}
-    .count ul {font-size: 23px;
-        li {padding-top: 8px;}
-    }
+    .count ul {font-size: 20px;}
     .comment p{font-size:16px;letter-spacing:1px}
     .comment .caption2{font-size:15px}
     .offer .h1 {font-size: 45px;}
     .offer .h3 {font-size: 18px;}
-    footer .phy {font-size: 18px;
-        &:before {}
-    }
-    .split ul li {font-size: 22px;padding-left: 45px;
-        &:before {left: 5px;}
-    }
+    .split ul li {font-size: 20px;padding-left: 25px;}
     h2 {font-size: 30px;}
-    footer .split article h2 {font-size: 54px; padding: 0}
+    footer .split h2 { padding: 0}
     #google p{font-size:14px}
-    footer .pho {font-size: 30px; margin-top: 20px; padding-left: 10px;
-        &:before {top: 0;left: -26px;}
+    footer .pho {font-size: 30px; margin-top: 20px; 
+        &:before {top: 0;}
     }
-    .hours:before {top: 10px;left: -12px;}
-    .hours {padding-left: 30px;}
+    .hours:before {top: 10px;}
     footer .split p {font-size: 16px;}
     .insurance {
         h2{margin:10px 0 -15px;padding:10px 0 15px}
         .flex-ed div{margin:15px 18px;flex:1 1 100%}
     }
     .insurance .flex-ed {justify-content: center;}
-}
-@media (max-width: 350px) {
-    footer .split article h2 {font-size: 46px;}
-    footer .pho {font-size: 26px;margin: 0;text-align: center;
-        &:before {left: -3px;font-size: 26px;}
-    }
-    header #nav #mobile-btns .phone {font-size: 18px;}
-    header #nav #mobile-btns .btn {font-size: 13px;}
 }
