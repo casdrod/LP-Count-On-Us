@@ -15,11 +15,11 @@ $text: #0D0D0D;
 }
 @media (max-width: 1030px) {
     #fixed-tabs{position:fixed;right:0;text-align:center;line-height:1;font-size:0;z-index:10000; bottom:0;width:100%;box-shadow:0 0 15px rgba(0,0,0,0.3); display:flex;
-       a{padding:13px 0;flex: 1; font-size:13px;font-weight:700;font-family: $font;background-color: darken($secondary, 10%);color:#fff;text-transform:uppercase; 
+       a{padding:13px 0;flex: 1; font-size:13px;font-weight:700;font-family: $font;background-color: $secondary;color:#fff;text-transform:uppercase; 
           span{display:inline-block;vertical-align:middle;
             &:last-child{margin-left:7px} 
            } 
-           &:nth-of-type(2){background-color:darken($primary, 10%); }
+           &:nth-of-type(2){background-color:$primary; }
         }
         .ra {flex: 2;}
        i{font-size:16px; margin-right: 5px;}
@@ -322,7 +322,7 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 }
 
 .comment{flex:1 1 900px;padding:30px 50px 40px;text-align:left;margin:auto;
-    p{font:400 30px/40px $font;margin-top:30px;margin-bottom:10px;color:#fff; letter-spacing: 0.05em;line-height: 45px;}
+    p{font:400 30px/40px $font;margin-top:30px;margin-bottom:10px;color:#fff;}
     .caption2{float:right;font:600 normal 16px/1 $font; letter-spacing: 0.15em; text-transform:uppercase;margin:5px 0 0}
 }
 
@@ -564,8 +564,16 @@ footer{overflow:hidden; padding:40px 0 0;
         .split article {padding: 50px 10px 10px; border-radius: 0;}
         .split p {text-align: left;}
         .phy, .pho, .hours {display: table; margin: 20px auto;}
-        .pho {margin-top: 40px;}
+        .pho {margin: 10px 10px 10px 20px;padding-left: 25px;
+            &:before {left: -12px;}
+        }
+        .phy {padding-left: 10px;
+            &:before {left: -22px;}
+        }
     }
+.hours {padding-left: 0;}
+.hours:before {left: -37px;
+    top: 8px;}
     .hours p {font-size: 18px;}
     .split {
         .flex-ed {
@@ -700,10 +708,7 @@ footer{overflow:hidden; padding:40px 0 0;
     .offer .h1 {font-size: 45px;}
     .offer .h3 {font-size: 18px;}
     footer .phy {font-size: 18px;
-        &:before {left: 7px;}
-    }
-    footer .pho {padding-left: 10px;
-        &:before {left: -26px;}
+        &:before {}
     }
     .split ul li {font-size: 22px;padding-left: 45px;
         &:before {left: 5px;}
@@ -711,10 +716,10 @@ footer{overflow:hidden; padding:40px 0 0;
     h2 {font-size: 30px;}
     footer .split article h2 {font-size: 54px; padding: 0}
     #google p{font-size:14px}
-    footer .pho {font-size: 30px; margin-top: 20px; 
-        &:before {top: 0;}
+    footer .pho {font-size: 30px; margin-top: 20px; padding-left: 10px;
+        &:before {top: 0;left: -26px;}
     }
-    .hours:before {top: 10px;}
+    .hours:before {top: 10px;left: -12px;}
     .hours {padding-left: 30px;}
     footer .split p {font-size: 16px;}
     .insurance {
