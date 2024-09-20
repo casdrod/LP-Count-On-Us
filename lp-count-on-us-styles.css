@@ -1162,8 +1162,9 @@ header #nav #mobile-btns #mobile-special .container small {
   margin-top: 60px;
 }
 #reviews #review-container {
-  height: 418px;
+  height: 427px;
   position: relative;
+  background: #fff;
   box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.16);
   box-shadow: 1.6px 2.5px 7px rgba(7, 8, 8, 0.15);
   max-width: 1130px;
@@ -1173,13 +1174,32 @@ header #nav #mobile-btns #mobile-special .container small {
   padding: 0;
   margin: auto;
   flex-wrap: nowrap;
+  border: 0.5rem solid #BF824D;
+  border-radius: none;
+}
+#reviews #review-container:before, #reviews #review-container:after {
+  content: "";
+  background-color: #333333;
+  height: 82%;
+  width: 0.5rem;
+  position: absolute;
+  z-index: 1;
 }
 #reviews #review-container:before {
-  content: url(assets/images/extra-border-reviews.png);
-  position: absolute;
-  left: -9px;
-  z-index: -1;
-  top: -11px;
+  left: -8px;
+  top: 9%;
+  border-left: 2px solid #B88C1E;
+}
+#reviews #review-container:after {
+  right: -8px;
+  top: 9%;
+  border-right: 2px solid #B88C1E;
+}
+#reviews #review-container span {
+  font-family: "roboto", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.15em;
 }
 #reviews #review-container #google {
   background-color: #fff;
@@ -1212,12 +1232,14 @@ header #nav #mobile-btns #mobile-special .container small {
   letter-spacing: 1.5px;
 }
 #reviews #review-container .comment {
-  flex: 1 1 900px;
-  padding: 30px 50px 57px;
+  flex: 1 0 900px;
   text-align: left;
-  margin: auto;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem;
+  position: relative;
   background: #fff;
-  border-radius: 0 8px 8px 0;
 }
 #reviews #review-container .comment p {
   font: 400 36px/41px "roboto", sans-serif;
@@ -1740,31 +1762,27 @@ footer .split #hours > div span > span {
   #reviews {
     padding: 60px 30px;
     margin-top: 30px;
+    background: #171B4B;
   }
   #reviews #review-container {
     height: auto;
+    border-color: #B88C1E;
     flex-wrap: wrap;
-    border-radius: 20px;
-    max-width: 300px;
-    flex-wrap: wrap;
-    border-radius: 20px;
+    border-radius: none;
   }
-  #reviews #review-container:before {
-    content: url(assets/images/reviews-extra-border-mobile.png);
-    left: -27px;
+  #reviews #review-container:before, #reviews #review-container:after {
+    height: 90%;
+    top: 5%;
   }
   #reviews #review-container .comment {
+    border-radius: 0 0 20px 20px;
     padding: 0 20px 60px;
-    border-radius: 0;
-    left: -27px;
+    flex: 1;
   }
   #reviews #review-container .comment p {
     text-align: center;
-    font-size: 22px;
-    line-height: 30px;
   }
   #reviews #review-container .comment .caption2 {
-    font-size: 18px;
     width: 100%;
     margin-top: 10px;
   }
@@ -1828,6 +1846,9 @@ footer .split #hours > div span > span {
   }
   footer .split figure {
     margin: 80px auto;
+  }
+  footer .split figure:last-child {
+    display: none;
   }
   footer .split > div > div {
     margin: 30px auto;

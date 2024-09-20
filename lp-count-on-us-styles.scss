@@ -302,14 +302,33 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 
 
 #reviews{background: url(assets/images/lp-count-review-bkg.jpg);background-repeat: no-repeat;background-size: cover; padding:80px 30px; margin-top: 60px;
-    #review-container{height: 418px; position:relative; box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.16);box-shadow:1.6px 2.5px 7px rgba(7,8,8,0.15);max-width:1130px;color:#fff;z-index: 100;align-items:center;padding:0;margin:auto;flex-wrap:nowrap;
-        &:before {content: url(assets/images/extra-border-reviews.png);position: absolute;left: -9px;z-index: -1;top: -11px;}
+    #review-container{height: 427px;
+        position: relative;
+        background: #fff;
+        box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.16);
+        box-shadow: 1.6px 2.5px 7px rgba(7, 8, 8, 0.15);
+        max-width: 1130px;
+        color: #fff;
+        z-index: 100;
+        align-items: center;
+        padding: 0;
+        margin: auto;
+        flex-wrap: nowrap;
+        border: 0.5rem solid #BF824D;
+        border-radius: none;
+        &:before, &:after {content: ""; background-color: #333333; height: 82%; width: 0.5rem;position: absolute; z-index: 1;}
+        &:before {left: -8px;top: 9%;border-left: 2px solid $primary;}
+        &:after {right: -8px; top: 9%; border-right: 2px solid $primary;}
+        span {font-family: $font;
+            font-weight: 600;
+            font-size: 18px;
+            letter-spacing: 0.15em;}
         #google{background-color:#fff;flex:0 1 225px;align-self:stretch;text-align:center;display:flex;flex-direction:column;justify-content:center; border-radius: 8px 0 0 8px;
             img{padding:10px 0 15px}
              > div{margin-top:25px;padding:5px 25px}
              p{color:#fff;font-size:20px;line-height:1.25;display:block;margin-top:15px;font-size:15px;text-transform: uppercase; color: $text; font-weight: 600; font-family: $font; letter-spacing: 1.5px; }
         }
-        .comment{flex:1 1 900px;padding:30px 50px 57px;text-align:left;margin:auto;background: #fff;border-radius: 0 8px 8px 0;
+        .comment{flex: 1 0 900px; text-align: left;justify-content: center;display: flex;flex-direction: column;padding: 0 3rem;position: relative;background: #fff;
             p{font:400 36px/41px $font;margin-top:30px;margin-bottom:10px;color:$text; letter-spacing: 0.05em;line-height: 45px;}
             .caption2{float:right;font:600 normal 16px/1 $font; letter-spacing: 0.15em; text-transform:uppercase;margin:5px 0 0}
         }
@@ -528,17 +547,14 @@ footer{overflow:hidden; padding:100px 0 0;background: url(assets/images/lp-count
         h2 {text-align: center;}
         ul {display: table; margin:  auto;}
     }
-    #reviews{
-        padding:60px 30px; margin-top: 30px;
-        #review-container {height:auto;flex-wrap:wrap;border-radius:20px;max-width: 300px;
-            &:before {content: url(assets/images/reviews-extra-border-mobile.png);left: -27px;}
-            flex-wrap:wrap; border-radius: 20px;
-            .comment {padding:0 20px 60px;border-radius: 0;left: -27px;
-                p {text-align:center;font-size: 22px;line-height: 30px;}
-                .caption2 {font-size: 18px;width: 100%;
-                    margin-top: 10px;}
+    #reviews{padding: 60px 30px; margin-top: 30px; background: $secondary;
+        #review-container {height: auto; border-color: $primary; flex-wrap: wrap;border-radius: none;
+            &:before, &:after {height: 90%;top: 5%;}
+            .comment {border-radius: 0 0 20px 20px; padding: 0 20px 60px;flex: 1;
+                p {text-align:center;}
+                .caption2 {width: 100%; margin-top: 10px;}
             }
-            #google {flex:0 1 100%; border-radius: 20px 20px 0 0;
+            #google {flex: 0 1 100%;border-radius: 20px 20px 0 0;
                 .star {margin: 10px auto 20px;}
                 p {margin: 0 auto;}
                 p img{margin:0 auto;}
@@ -568,7 +584,9 @@ footer{overflow:hidden; padding:100px 0 0;background: url(assets/images/lp-count
     
     footer {padding: 0;
         .split {margin: 30px; border-radius: 20px;
-            figure {margin: 80px auto;}
+            figure {margin: 80px auto;
+                &:last-child {display:none;}
+            }
             > div {
                 > div {margin: 30px auto;
                     h2 {padding: 0;}
